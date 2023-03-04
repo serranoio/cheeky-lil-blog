@@ -1,0 +1,28 @@
+.postsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  /* grid-template-columns: repeat(6, 1fr); */
+}
+
+.postFigure {
+  background-color: black;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.4rem;
+  cursor: pointer;
+  color: var(--primary-9);
+}
+
+.postFigure:hover {
+  color: var(--primary-5);
+}
+.topicTitle {
+  font-size: 6.4rem;
+  text-align: center;
+  color: var(--primary-10);
+}
+.postTitle {
+  color: var(--primary-10);
+}

@@ -1,0 +1,21 @@
+.listItem {
+  font-size: 2.4rem;
+  opacity: 0;
+  visibilty: none;
+  pointer-events: none;
+}
+
+.open {
+  opacity: 1;
+  visibilty: inherit;
+  pointer-events: inherit;
+}
+
+.ol {
+  list-style: none;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  top: 130%;
+}

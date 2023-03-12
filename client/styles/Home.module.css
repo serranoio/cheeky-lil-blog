@@ -6,7 +6,7 @@
 
   padding: 1.2rem 3.6rem;
   font-size: 3.6rem;
-  background-color: var(--primary-10);
+  background-color: var(--first);
   color: var(--primary-1);
   border-radius: 10px;
 
@@ -16,4 +16,135 @@
 .link:hover {
   background-color: var(--primary-9);
   color: var(--primary-2);
+}
+
+.home {
+  overflow-y: hidden;
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 91vh;
+}
+
+.background {
+  position: absolute;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-image: linear-gradient(rgba(25, 14, 0, 0.3), rgba(25, 14, 0, 0.5)),
+    url("../assets/images/wall-street.jpg");
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  height: 100%;
+  width: 50vw;
+  animation: blur;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes blur {
+  0% {
+    background-position: 20% 20%;
+    filter: blur(5px);
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+  }
+
+  100% {
+    filter: blur(0px);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+}
+
+.title {
+  font-size: 9.8rem;
+  color: var(--sixth);
+  text-align: center;
+  transform: translate(50px, 20px);
+  letter-spacing: 2px;
+  animation: fade-in;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: translateY(7px);
+  }
+  to {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.absolute {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  animation-name: rotate, fade-in;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite, 1;
+  animation-timing-function: linear;
+  transition-timing-function: linear;
+}
+.absolute:hover {
+}
+
+.react {
+  width: 175px;
+  height: 155px;
+  left: 8%;
+  top: 50%;
+  z-index: 999999999;
+  background-image: url("../assets/images/react.png");
+}
+
+.next {
+  left: 10%;
+  top: 20%;
+  z-index: 999999999;
+  background-image: url("../assets/images/next.png");
+}
+
+.typescript {
+  left: 13%;
+  top: 75%;
+  z-index: 999999999;
+  background-image: url("../assets/images/typescript.png");
+}
+
+.golang {
+  left: 78%;
+  top: 70%;
+  z-index: 999999999;
+  background-image: url("../assets/images/golang.png");
+  height: 250px;
+  width: 250px;
+}
+
+.pocketbase {
+  left: 82%;
+  top: 30%;
+  z-index: 999999999;
+  background-image: url("../assets/images/pocketbase.png");
 }

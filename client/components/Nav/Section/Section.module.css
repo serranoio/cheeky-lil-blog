@@ -1,14 +1,50 @@
 .listItem {
   font-size: 2.4rem;
   opacity: 0;
-  visibilty: none;
+  visibility: hidden;
   pointer-events: none;
+  /* background-color: var(--sixth); */
+  transform: translate3D(5px, 0, 50px);
+  transform-origin: center;
+  transition: all 0.5s;
+  transform-style: preserve-3d;
+}
+.listItem a {
+  position: relative;
 }
 
+.listItem a span {
+  display: inline-block;
+  position: absolute;
+  bottom: -20%;
+  left: 0;
+  transform: translate(-50%, -50%);
+
+  height: 2px;
+  width: 100%;
+  background-color: var(--sixth);
+  transition: all 0.2s;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.listItem:hover a span {
+  transform: scaleX(100%);
+}
+
+.listItem.open {
+  opacity: 1;
+  transform-style: preserve-3d;
+  visibility: inherit;
+  pointer-events: inherit;
+  transform: translate3D(0, 0, 0);
+}
 .open {
   opacity: 1;
-  visibilty: inherit;
-  pointer-events: inherit;
+}
+.open a {
+  /* color: var(--first); */
+  /* background-color: var(--sixth); */
 }
 
 .ol {
@@ -16,6 +52,9 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 2.4rem;
   top: 130%;
+  /* color: var(--first); */
+  /* background-color: var(--sixth); */
+  perspective: 500px;
 }

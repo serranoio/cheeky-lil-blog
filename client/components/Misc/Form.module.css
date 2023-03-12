@@ -1,0 +1,76 @@
+.window {
+  background-color: var(--second);
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  padding: 6.4rem;
+  border-radius: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3.6rem;
+  color: var(--sixth);
+}
+.form div {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.formTitle {
+  font-size: 4rem;
+  margin-bottom: 2.4rem;
+  text-align: center;
+}
+
+.form label {
+  font-size: 1.6rem;
+}
+.form input {
+  font-size: 2rem;
+}
+.form div {
+  width: 100%;
+}
+.form div input {
+  width: 100%;
+}
+
+.form textarea {
+  resize: none;
+}
+.submit {
+  padding: 1.2rem 3.2rem;
+  background: transparent;
+  border: 2px solid var(--sixth);
+  border-radius: 10px;
+  color: var(--sixth);
+  cursor: pointer;
+  font-size: 2.4rem;
+  width: 100%;
+  transition: all 0.2s;
+}
+.submit:hover {
+  transform: translateY(-2px);
+}
+
+.close {
+  position: absolute;
+  top: 4%;
+  right: 4%;
+  background: transparent;
+  border-radius: 10px;
+  padding: 0.6rem;
+  color: var(--sixth);
+  border: 2px solid var(--sixth);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.close:hover {
+  transform: translateY(-2px);
+}

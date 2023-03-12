@@ -26,3 +26,14 @@
 .postTitle {
   color: var(--primary-10);
 }
+
+.pageName {
+  color: var(--sixth-off);
+  position: absolute;
+  left: 50%;
+  top: 3%;
+  transform: translateX(-50%);
+  font-size: 2.4rem;
+  font-style: italic;
+  z-index: 999;
+}

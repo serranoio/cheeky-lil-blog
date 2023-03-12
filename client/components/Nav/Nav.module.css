@@ -4,13 +4,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--primary-3);
-  background-image: linear-gradient(
-    to right,
-    var(--primary-3),
-    var(--primary-4)
-  );
+  background: transparent;
+  background-image: linear-gradient(to top, var(--first), var(--first-tint));
   box-shadow: 0px 1px 2px 2px rgba(0, 0, 0, 0.4);
+  color: var(--sixth);
+  z-index: 1;
+  position: relative;
 }
 
 .content {
@@ -30,4 +29,15 @@
 
 .li {
   position: relative;
+}
+
+.modal {
+  position: absolute;
+  background-color: transparent;
+  width: 100vw;
+  height: 100vh;
+  left: 50%;
+  top: 600%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
 }

@@ -1,0 +1,13 @@
+.signinForm {
+  background: rgba(255, 142, 1, 0.5);
+  -webkit-backdrop-filter: blur(50px);
+  left: 0%;
+  top: 50%;
+  width: 50%;
+  height: 50%;
+  border-radius: 10px;
+  transform: translate(-100%, -50%);
+  backdrop-filter: blur(50px);
+  position: absolute;
+  padding: 2.4rem;
+}

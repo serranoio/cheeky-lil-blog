@@ -2,6 +2,8 @@ import React, { FC, useState } from "react";
 import classes from "./Nav.module.css";
 import Section from "./Section/Section";
 import Link from "next/link";
+import Auth from "@/pocketbase/Auth";
+import CreatePost from "../CreatePost/CreatePost";
 
 const blogContent: string[] = ["Home", "Topics", "Posts"];
 
@@ -13,6 +15,8 @@ map.set("Blog", blogContent);
 map.set("Me", Me);
 
 const Nav: FC = () => {
+  const [openLogin, setOpenLogin] = useState(false);
+
   const [section, openSection] = useState(
     [...map.keys()].map((key: string) => false)
   );
@@ -25,6 +29,29 @@ const Nav: FC = () => {
     });
   };
 
+  const handleModal = (openOrClose: boolean): void => {
+    setOpenLogin(openOrClose);
+  };
+
+  const Create = <CreatePost onClose={handleModal} />;
+
+  const modal = openLogin ? (
+    <div
+      onClick={(e) => {
+        if ((e.target as HTMLElement).closest("figure")) {
+          return; // if we clicked it, we want it to return
+        }
+
+        handleModal(false);
+      }}
+      className={classes.modal}
+    >
+      {Create}
+    </div>
+  ) : (
+    <></>
+  );
+
   return (
     <nav className={classes.nav}>
       <h2 className={classes.content}>
@@ -33,7 +60,7 @@ const Nav: FC = () => {
       <ol className={classes.ol}>
         {[...map.keys()].map((tab: string, i: number) => {
           return (
-            <li className={classes.li}>
+            <li className={classes.li} key={i}>
               <h3
                 className={classes.h3}
                 onClick={openSectionHandler.bind(null, i)}
@@ -44,11 +71,19 @@ const Nav: FC = () => {
                 items={map.get(tab)}
                 tab={tab}
                 section={section[i]}
+                i={i}
+                openSection={openSection}
               ></Section>
             </li>
           );
         })}
+        <li className={classes.li}>
+          <h3 className={classes.h3} onClick={handleModal.bind(null, true)}>
+            Create
+          </h3>
+        </li>
       </ol>
+      {modal}
     </nav>
   );
 };

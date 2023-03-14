@@ -11,7 +11,7 @@ To run:
 
 
 in /server
-Im pretty sure you have to install dependencies, so go get all of the imports. Not familiar with the exact command. Im pretty sure go get each individual import works
+Im pretty sure you have to install dependencies, so go get all of the imports. Not familiar with the exact command. Im pretty sure go get each individual import works.
 ```
 go run ./main.go serve
 ```
@@ -23,7 +23,7 @@ install dependencies (npm i)
 ```
 npm run dev
 ```
-run on localhost:3000, and backend should be ran on the normal http://127.0.0.1:8090
+Run on localhost:3000, and backend should be ran on the normal http://127.0.0.1:8090
 
 You should be able to check out the portfolio home page and blog!!!🐐🥇🥳🎊🐐🥇🥳🎊🐐🥇🥳🎊🐐🥇🥳🎊🐐🥇🥳🎊
 
@@ -31,8 +31,6 @@ Admin login:
 
 username: user@gmail.com
 password: password123
-
-The frontend uses the JavaScript SDK to talk to the running pocketbase server.
 
 There are still a lot of frontend details that need to be implemented.
 

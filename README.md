@@ -7,11 +7,12 @@ Next-React&lt;->Go-Pocketbase
 
 This is my soon to be portfolio page, where I have incorporated an entire blog that anyone can create posts on. It incorporates Authentication + all CRUD operations.
 
-To run:
 
+Im pretty sure you have to install dependencies, so go get all of the imports. Not familiar with the exact command. Im pretty sure go get each individual import works
+
+To run:
 ```
 cd server
-(im pretty sure you have to install dependencies, so go get all of the imports. Not familiar with the exact command. Im pretty sure go get each individual import works)
 go run ./main.go serve
 ```
 

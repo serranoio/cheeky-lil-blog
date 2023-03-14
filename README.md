@@ -9,14 +9,18 @@ This is my soon to be portfolio page, where I have incorporated an entire blog t
 
 To run:
 
+```
 cd server
 (im pretty sure you have to install dependencies, so go get all of the imports. Not familiar with the exact command. Im pretty sure go get each individual import works)
 go run ./main.go serve
+```
 
+```
 cd ..
 cd client
 install dependencies (npm i)
 npm run dev
+```
 
 You should be able to check out the blog!!!🐐🥇🥳🎊🐐🥇🥳🎊🐐🥇🥳🎊🐐🥇🥳🎊🐐🥇🥳🎊
 

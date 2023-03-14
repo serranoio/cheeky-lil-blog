@@ -7,16 +7,17 @@ import classes from "./topic.module.css";
 import { posts } from "@/store/data/posts";
 import pb from "@/pocketbase/pocketbase";
 import { topics } from "@/store/data/topics";
-
-// const postListDummy = ["Sacrifice", "Theory", "Sacredness"];
-
-import { removeDuplicates } from "@/functions/misc";
 import PictureGrid from "@/components/PictureGrid/PictureGrid";
 
+// topic: /blog/topic
+// this function shows you all topics using topics when you route to /blog/topic.
+// when you click on a topic, the database is read and all items within a certain topic are pulled up.
+// ex: click coding. router to /blog/coding is made.
 export default function Topic() {
   const router = useRouter();
 
-  const [postList, changePostList] = useState([]);
+  const [postList, changePostList] = useState([]); // all posts are stored here
+  const [title, setTitle] = useState(""); // topic title
 
   useEffect(() => {
     if (router.query.topic === undefined) {
@@ -36,7 +37,7 @@ export default function Topic() {
               )
               .map((record: any, i: number) => {
                 return {
-                  picture: `http://127.0.0.1:8090/api/files/${record.collectionId}/${record.id}/${record.post_pic}`,
+                  picture: `http://127.0.0.1:8090/api/files/${record.collectionId}/${record.id}/${record.post_pic}`, // pb picture's are served on this link
                   title: record.title,
                   recordId: record.id,
                 };
@@ -46,7 +47,6 @@ export default function Topic() {
       });
   }, [router]);
 
-  const [title, setTitle] = useState("");
   useEffect(() => {
     if (router.query.topic === undefined) {
       return;
@@ -63,7 +63,7 @@ export default function Topic() {
     );
   }, [router]);
 
-  const mainTopics = (
+  const allTopics = (
     <div className={classes.viewport}>
       <h1 className={classes.pageName}>Choose Topic</h1>
       <PictureGrid
@@ -88,5 +88,5 @@ export default function Topic() {
     </div>
   );
 
-  return router.query.topic === "topic" ? mainTopics : chosenTopic;
+  return router.query.topic === "topic" ? allTopics : chosenTopic;
 }

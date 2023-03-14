@@ -10,6 +10,8 @@ interface AuthInterface {
   onClose: any;
 }
 
+// Auth:
+// implements auth
 const Auth: FC<AuthInterface> = ({ onClose }) => {
   const [isLoading, setLoading] = useState(false);
   const emailInputRef = useRef() as RefObject<HTMLInputElement>;
@@ -50,14 +52,18 @@ const Auth: FC<AuthInterface> = ({ onClose }) => {
         </h3>
         {!user.isAuth ? (
           <>
-            <label htmlFor="email">email</label>
-            <input ref={emailInputRef} id="email" placeholder="example" />
-            <label htmlFor="password">password</label>
-            <input
-              ref={passwordInputRef}
-              id="password"
-              placeholder="password123"
-            />
+            <div>
+              <label htmlFor="email">email</label>
+              <input ref={emailInputRef} id="email" placeholder="example" />
+            </div>
+            <div>
+              <label htmlFor="password">password</label>
+              <input
+                ref={passwordInputRef}
+                id="password"
+                placeholder="password123"
+              />
+            </div>
           </>
         ) : (
           <></>
@@ -67,7 +73,9 @@ const Auth: FC<AuthInterface> = ({ onClose }) => {
         </button>
         {isLoading ? <Spinner /> : <></>}
       </form>
-      <button onClick={onClose.bind(null, false)}>Close</button>
+      <button className={classes.close} onClick={onClose.bind(null, false)}>
+        Close
+      </button>
     </figure>
   );
 };

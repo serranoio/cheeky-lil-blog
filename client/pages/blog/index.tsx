@@ -7,6 +7,7 @@ import { mapper } from "@/functions/misc";
 import { topics } from "@/store/data/topics";
 import PictureGrid from "@/components/PictureGrid/PictureGrid";
 
+// Blog: /blog. This is the homepage for the blog. It just describes the blog.
 export default function Blog() {
   return (
     <div className={classes.viewport}>

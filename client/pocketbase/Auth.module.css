@@ -4,10 +4,39 @@
   left: 0%;
   top: 50%;
   width: 50%;
-  height: 50%;
+  height: 35%;
   border-radius: 10px;
   transform: translate(-100%, -50%);
   backdrop-filter: blur(50px);
   position: absolute;
   padding: 2.4rem;
+  color: var(--first);
+}
+
+.signinForm h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.signinForm div {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.signinForm button {
+  background: transparent;
+  padding: 1.2rem;
+  border-radius: 10px;
+  border: 2px solid var(--second);
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  bottom: 3%;
+}
+.signinForm button:not(.close) {
+  width: 100%;
 }

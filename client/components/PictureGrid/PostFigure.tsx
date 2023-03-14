@@ -40,16 +40,26 @@ const PostFigure: FC<PostFigureInterface> = ({
     linear-gradient(rgba(25, 14, 0, .3), rgba(25, 14, 0, 0.5)), url(${post.picture})`,
       };
 
-  const calculatedGridColumn: string =
+  // console.log(gridColumns - (listLength % gridColumns));
+  // 9 % 8 === 1, 4
+  // 10 % 8 === 2, 2 =
+  // 11 % 8 === 3, 1
+  const getSpan = () => {
+    if (listLength % gridColumns === 1) {
+      return 4;
+    } else if (listLength % gridColumns === 2) {
+      return 2;
+    } else if (listLength % gridColumns === 3) {
+      return 1;
+    }
+  };
+
+  let calculatedGridColumn: string =
     i >= Math.floor(listLength / gridColumns) * gridColumns && listLength >= 4
-      ? ` span ${gridColumns - ((listLength % gridColumns) - 1)}`
+      ? ` span ${getSpan()}`
       : `auto`;
 
-  // if (
-  //   i >= Math.floor(listLength / gridColumns) * gridColumns &&
-  //   listLength >= 4
-  // ) {
-  // }
+  // console.log(calculatedGridColumn);
 
   return (
     <Link

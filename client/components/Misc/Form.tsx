@@ -12,6 +12,7 @@ interface FormInterface {
   post: any;
 }
 
+// Form: handles update and create
 const Form: FC<FormInterface> = ({ action, onClose, type, post_id, post }) => {
   const [chosenTopic, updateChosenTopic] = useState("");
 
@@ -19,6 +20,8 @@ const Form: FC<FormInterface> = ({ action, onClose, type, post_id, post }) => {
   const bodyRef = useRef() as RefObject<HTMLTextAreaElement>;
   const authorRef = useRef() as RefObject<HTMLInputElement>;
 
+  // we have to input title, body, author into form
+  // during update
   const [titleValue, setTitleValue] = useState(
     type === "create" ? "" : post.title
   );
@@ -60,7 +63,7 @@ const Form: FC<FormInterface> = ({ action, onClose, type, post_id, post }) => {
     // const title = titleRef?.current?.value!;
   };
 
-  const auth = <Auth onClose={onClose} />; // will use when we implement Auth
+  const auth = <Auth onClose={onClose} />;
   return (
     <figure className={classes.window}>
       {auth}

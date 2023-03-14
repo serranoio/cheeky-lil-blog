@@ -35,7 +35,7 @@
   font-size: 3rem;
   line-height: 1.5;
   color: var(--sixth-off);
-  word-break: break-all;
+  /* word-break: break-all; */
 }
 
 .update {
@@ -75,7 +75,7 @@
   align-items: center;
   gap: 1.2rem;
   position: absolute;
-  right: 20%;
+  left: 0%;
   top: 50%;
   transform: translate(0, -50%);
   border-radius: 10px;

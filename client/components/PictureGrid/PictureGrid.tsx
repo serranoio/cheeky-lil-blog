@@ -13,24 +13,30 @@ interface PictureGridInterface {
 
 const gridColumns: number = 4;
 
+// PictureGrid: the meat of the project
+// this creates a grid from the list.
 const PictureGrid: FC<PictureGridInterface> = ({ routerLink, list }) => {
+  // onMouseMove, we controlX and controlY of a hovered PostFigure
   const [controlY, changeControlY] = useState(list.map(() => 0));
   const [controlX, changeControlX] = useState(list.map(() => 0));
-  const [view, controlView] = useState(list.map(() => 1));
+  const [view, controlView] = useState(list.map(() => 1)); // controls color of text
 
   useEffect(() => {
     controlView(list.map(() => 1));
   }, [list]);
 
+  // controlsPosition of backgroundImage and color of text
   const controlPosition = (e: any, i: number): void => {
     controlView((prevState: number[]) => {
-      prevState = prevState.length === 0 ? prevState.map(() => 1) : prevState;
+      // when we hover over a card, we must turn all off except this one
+      prevState = prevState.length === 0 ? prevState.map(() => 1) : prevState; // just making sure list is updated
       return prevState.map(
-        (num: number, index: number) => (index === i ? 1 : 0) // if we make it 1, then we turn it on and the rest are off
+        (_: number, index: number) => (index === i ? 1 : 0) // if we make it 1, then we turn it on and the rest are off
       );
     });
 
-    let target = e.target;
+    let target: HTMLElement = e.target.closest("figure"); // make sure we're on figure
+
     const top = target.getBoundingClientRect().top;
     const bottom = target.getBoundingClientRect().bottom;
     const mouseTop = e.clientY;
@@ -59,14 +65,12 @@ const PictureGrid: FC<PictureGridInterface> = ({ routerLink, list }) => {
       prevState[i] = newnum;
       return [...prevState];
     });
-    // controlY =
   };
 
+  // resetColors: we reset all colors to on when we leave
   const resetColors = (e: any) => {
     controlView((prevState: any) => prevState.map(() => 1));
   };
-
-  // list.length % gridColumns === 0 formula for last
 
   return (
     <div
@@ -75,9 +79,10 @@ const PictureGrid: FC<PictureGridInterface> = ({ routerLink, list }) => {
       style={{
         gridTemplateColumns: `repeat(${
           list.length >= gridColumns ? gridColumns : list.length
-        }, 1fr)`,
+        }, 1fr)`, // if the length is NOT greater or equal to gridColumns, we will make
+        // only length gridColumns
         gridTemplateRows: `repeat(${Math.ceil(
-          list.length / gridColumns
+          list.length / gridColumns // we will make 10 / 4 = ciel(2.25) = 3 rows
         )}, 1fr)`,
       }}
     >

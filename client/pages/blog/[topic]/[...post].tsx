@@ -9,15 +9,16 @@ import Form from "@/components/Misc/Form";
 import PictureGrid from "@/components/PictureGrid/PictureGrid";
 import { useSelector } from "react-redux";
 
+// post:
+// A: When a post is clicked, the individual post is fetched
+// B: when you press the Posts link in navbar, all posts are fetched
 export default function Post() {
+  // A: When a post is clicked, the individual post is fetched
   const router = useRouter();
 
-  const [showModal, setShowModal] = useState(false);
-
-  const [deletePageModalState, openDeletePageModal] = useState(false);
-
-  const user = useSelector((state: any) => state.userReducer);
-
+  const [showModal, setShowModal] = useState(false); // update
+  const [deletePageModalState, openDeletePageModal] = useState(false); // delete
+  const user = useSelector((state: any) => state.userReducer); // logged in user
   const [post, changePost] = useState({
     title: "",
     body: "",
@@ -26,7 +27,7 @@ export default function Post() {
     post_pic: "",
     author: "",
     id: "",
-  });
+  }); // a post
   useEffect(() => {
     const topic = router.query.topic;
     if (router.query.post === undefined) {
@@ -63,17 +64,17 @@ export default function Post() {
     setShowModal(false);
   };
 
-  const handleSubmit = () => {};
-
+  // code to handle when Post link in nav bar is clicked. /blog/topic/posts
+  // B: when you press the Posts link in navbar, all posts are fetched
   const [postList, changePostList] = useState([]);
 
   useEffect(() => {
     pb.collection("posts")
       .getFullList()
       .then((data) => {
-        changePostList((prevPosts: any[]) => {
+        // @ts-ignore
+        changePostList(() => {
           return [
-            // ...prevPosts,
             ...data.map((record: any, i: number) => {
               return {
                 picture: `http://127.0.0.1:8090/api/files/${record.collectionId}/${record.id}/${record.post_pic}`,
@@ -102,12 +103,7 @@ export default function Post() {
     if (user.isAuth) {
       router.push("/blog");
       deletePost(post.id);
-    } else {
     }
-  };
-
-  const openDeletePage = () => {
-    openDeletePageModal(true);
   };
   const closeDeletePage = () => {
     openDeletePageModal(false);
@@ -117,26 +113,32 @@ export default function Post() {
     <div className={classes.shadow}>
       <div className={classes.deletePage}>
         <p>Are you sure you want to delete?</p>
-        <p>{user.isAuth ? "" : "You must log into admin to delete"}</p>
+        <p>{user.isAuth ? "" : `Press "Create" to log into admin to delete`}</p>
         <div>
-          <button
-            onClick={() => {
-              closeDeletePage();
-              deletePage();
-            }}
-            className={classes.confirmDelete}
-            disabled={!user.isAuth}
-          >
-            Yes
-          </button>
-          <button
-            onClick={() => {
-              closeDeletePage();
-            }}
-            className={classes.confirmNo}
-          >
-            No
-          </button>
+          {user.isAuth ? (
+            <>
+              <button
+                onClick={() => {
+                  closeDeletePage();
+                  deletePage();
+                }}
+                className={classes.confirmDelete}
+                disabled={!user.isAuth}
+              >
+                Yes
+              </button>
+              <button
+                onClick={() => {
+                  closeDeletePage();
+                }}
+                className={classes.confirmNo}
+              >
+                No
+              </button>
+            </>
+          ) : (
+            <></>
+          )}
         </div>
       </div>
     </div>

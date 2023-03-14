@@ -1,5 +1,8 @@
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
+
+// 404 page
+// not really updated, but thats ok. This appears on any malrouting
 const Index = () => {
   const router = useRouter();
 

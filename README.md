@@ -7,23 +7,22 @@ Next-React&lt;->Go-Pocketbase
 
 This is my soon to be portfolio page, where I have incorporated an entire blog that anyone can create posts on. It incorporates Authentication + all CRUD operations.
 
+To run:
 
 Im pretty sure you have to install dependencies, so go get all of the imports. Not familiar with the exact command. Im pretty sure go get each individual import works
-
-To run:
+in /server
 ```
-cd server
 go run ./main.go serve
 ```
 
-```
-cd ..
-cd client
 install dependencies (npm i)
+in /client
+```
 npm run dev
 ```
+run on localhost:3000, and backend should be ran on
 
-You should be able to check out the blog!!!🐐🥇🥳🎊🐐🥇🥳🎊🐐🥇🥳🎊🐐🥇🥳🎊🐐🥇🥳🎊
+You should be able to check out the portfolio and blog!!!🐐🥇🥳🎊🐐🥇🥳🎊🐐🥇🥳🎊🐐🥇🥳🎊🐐🥇🥳🎊
 
 Admin login:
 

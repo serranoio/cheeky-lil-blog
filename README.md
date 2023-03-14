@@ -17,6 +17,7 @@ go run ./main.go serve
 ```
 
 install dependencies (npm i)
+
 in /client
 ```
 npm run dev

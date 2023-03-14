@@ -10,6 +10,7 @@ This is my soon to be portfolio page, where I have incorporated an entire blog t
 To run:
 
 Im pretty sure you have to install dependencies, so go get all of the imports. Not familiar with the exact command. Im pretty sure go get each individual import works
+
 in /server
 ```
 go run ./main.go serve

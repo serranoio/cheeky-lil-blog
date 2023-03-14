@@ -23,9 +23,9 @@ install dependencies (npm i)
 ```
 npm run dev
 ```
-run on localhost:3000, and backend should be ran on
+run on localhost:3000, and backend should be ran on the normal http://127.0.0.1:8090
 
-You should be able to check out the portfolio and blog!!!🐐🥇🥳🎊🐐🥇🥳🎊🐐🥇🥳🎊🐐🥇🥳🎊🐐🥇🥳🎊
+You should be able to check out the portfolio home page and blog!!!🐐🥇🥳🎊🐐🥇🥳🎊🐐🥇🥳🎊🐐🥇🥳🎊🐐🥇🥳🎊
 
 Admin login:
 

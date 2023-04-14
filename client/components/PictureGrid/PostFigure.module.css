@@ -27,7 +27,7 @@
       transparent 50%
     ),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
-    url("../../assets/images/morning-sun.jpg");
+    url("../../public/assets/images/morning-sun.jpg");
 }
 
 .postFigure[data-topic="coding"] {
@@ -39,7 +39,7 @@
       transparent 50%
     ),
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-    url("../../assets/images/coding.jpg");
+    url("../../public/assets/images/coding.jpg");
 }
 .postFigure[data-topic="nature"] {
   background-image: repeating-linear-gradient(
@@ -50,7 +50,7 @@
       transparent 50%
     ),
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-    url("../../assets/images/rose.jpg");
+    url("../../public/assets/images/rose.jpg");
 }
 
 .postFigure:hover {
@@ -62,14 +62,14 @@
 .topicTitle {
   font-size: 6.4rem;
   text-align: center;
-  color: var(--primary-10);
+  color: var(--h1);
 }
 .postTitle {
-  color: var(--primary-10);
+  color: var(--h1);
 }
 
 .linkVisibility {
-  color: var(--second-orange);
+  color: var(--secondary);
 }
 
 .p {

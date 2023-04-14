@@ -4,11 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "export": "next export",
+    "build-prod": "run-s clean build export",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@netlify/next": "^1.4.5",
+    "@phosphor-icons/react": "^2.0.8",
     "@reduxjs/toolkit": "^1.9.3",
     "@types/node": "18.14.6",
     "@types/react": "18.0.28",
@@ -16,11 +20,16 @@
     "cross-fetch": "^3.1.5",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
+    "framer-motion": "^10.11.2",
     "next": "13.2.3",
     "pocketbase": "^0.12.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-intersection-observer": "^9.4.3",
     "react-redux": "^8.0.5",
     "typescript": "4.9.5"
+  },
+  "devDependencies": {
+    "next-images": "^1.8.4"
   }
 }

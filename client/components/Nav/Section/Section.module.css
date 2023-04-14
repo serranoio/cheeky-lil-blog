@@ -3,7 +3,6 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  /* background-color: var(--sixth); */
   transform: translate3D(5px, 0, 50px);
   transform-origin: center;
   transition: all 0.5s;
@@ -22,7 +21,7 @@
 
   height: 2px;
   width: 100%;
-  background-color: var(--sixth);
+  background-color: var(--p);
   transition: all 0.2s;
   transform-origin: left;
   transform: scaleX(0);
@@ -43,8 +42,6 @@
   opacity: 1;
 }
 .open a {
-  /* color: var(--first); */
-  /* background-color: var(--sixth); */
 }
 
 .ol {
@@ -54,7 +51,5 @@
   flex-direction: column;
   gap: 2.4rem;
   top: 130%;
-  /* color: var(--first); */
-  /* background-color: var(--sixth); */
   perspective: 500px;
 }

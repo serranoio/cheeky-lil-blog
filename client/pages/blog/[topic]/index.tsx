@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import classes from "./topic.module.css";
 import { posts } from "@/store/data/posts";
-import pb from "@/pocketbase/pocketbase";
+import pb, { fileUrl } from "@/pocketbase/pocketbase";
 import { topics } from "@/store/data/topics";
 import PictureGrid from "@/components/PictureGrid/PictureGrid";
 
@@ -16,19 +16,18 @@ import PictureGrid from "@/components/PictureGrid/PictureGrid";
 export default function Topic() {
   const router = useRouter();
 
-  const [postList, changePostList] = useState([]); // all posts are stored here
+  const [postList, changePostList] = useState<any>([]); // all posts are stored here
   const [title, setTitle] = useState(""); // topic title
 
   useEffect(() => {
     if (router.query.topic === undefined) {
       return;
     }
-    console.log(router.query);
 
     pb.collection("posts")
       .getFullList()
       .then((data) => {
-        changePostList((prevPosts: any[]) => {
+        changePostList(() => {
           return [
             // ...prevPosts,
             ...data
@@ -37,7 +36,7 @@ export default function Topic() {
               )
               .map((record: any, i: number) => {
                 return {
-                  picture: `http://127.0.0.1:8090/api/files/${record.collectionId}/${record.id}/${record.post_pic}`, // pb picture's are served on this link
+                  picture: `${fileUrl}/${record.collectionId}/${record.id}/${record.post_pic}`, // pb picture's are served on this link
                   title: record.title,
                   recordId: record.id,
                 };

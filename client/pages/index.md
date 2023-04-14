@@ -9,5 +9,6 @@ make them all clickable
 
 TODO
 pocketbase add process.env
+create tech stack
 
 BUG

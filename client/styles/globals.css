@@ -21,7 +21,7 @@
 
   --primary-10: #ff6f00;
 
-  --first: #0c0c0c;
+  /* --first: #0c0c0c;
   --first-tint: #1c1c1c;
   --second-orange: #523512;
   --second: #190e00;
@@ -32,7 +32,16 @@
   --fifth: #ffe280;
   --fifth-dark: #857709;
   --sixth: #bfbfbf;
-  --sixth-off: #9a9a9a;
+  --sixth-off: #9a9a9a; */
+
+  --primary: #000000;
+  --secondary: #0f1012;
+  --h1: #d2d3d3;
+  --h2: #bcbcbd;
+  --p: #a5a6a7;
+  --tertiary: #ff512f;
+  --quartenary: #f09819;
+  --br: 20px;
 }
 
 * {
@@ -45,8 +54,8 @@ html,
 body {
   max-width: 100vw;
   height: 100vh;
-  background-color: var(--second);
-  overflow-x: hidden;
+  background-color: var(--primary);
+  /* overflow-x: hidden; */
   font-family: "DM Mono", monospace;
   font-weight: 400;
 }
@@ -69,15 +78,16 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background-color: var(--primary);
 }
 ::-webkit-scrollbar-thumb {
-  background-color: var(--first);
+  background: var(--tertiary);
   border-radius: 4px;
+  /* height: 50px; */
 }
 
 ::-webkit-scrollbar-corner {

@@ -2,7 +2,16 @@
 import PocketBase from "pocketbase";
 import "cross-fetch/polyfill";
 
-const pb = new PocketBase("http://127.0.0.1:8090"); // update this later
+const useLocal = false;
+
+const localHost = `http://127.0./'0.1:8090`;
+const servedHost = `https://epic-blog.fly.dev`;
+export const url = useLocal ? localHost : servedHost;
+
+export const fileUrl = url + "/api/files";
+
+const pb = new PocketBase(url); // update this later
+// const pb = new PocketBase("http://127.0./'0.1:8090"); // update this later
 
 pb.autoCancellation(false);
 

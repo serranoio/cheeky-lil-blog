@@ -1,0 +1,286 @@
+.title {
+  margin: 6.4rem;
+  font-size: 6.4rem;
+  color: var(--h2);
+  opacity: 0;
+  transition: all 0.5s;
+  text-align: center;
+}
+.desc {
+  font-size: 4.2rem;
+  color: var(--h2);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.inView {
+  opacity: 1 !important;
+}
+
+.section {
+  padding: 9.8rem 0;
+  max-width: 120rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.projectGrid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+  gap: 2.4rem;
+  height: 100vh;
+  opacity: 1;
+  transition: all 1s;
+}
+
+.project {
+  font-size: 2.4rem;
+  color: var(--p);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: var(--br);
+  /* mask-image: linear-gradient(to top, white 90%, transparent 100%); */
+}
+
+.flexModal {
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.project[data-project="0"] {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../../../public/assets/images/portfolio/davidportfolio.png");
+}
+.project[data-project="1"] {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../../../public/assets/images/morning-sun.jpg");
+}
+.project[data-project="2"] {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../../../public/assets/images/portfolio/betsygiron.PNG");
+}
+.project[data-project="3"] {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../../../public/assets/images/portfolio/techchad.PNG");
+}
+.project[data-project="4"] {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../../../public/assets/images/portfolio/AllbriteFamily.jpg");
+}
+.project[data-project="6"] {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../../../public/assets/images/portfolio/mapswithfriends.PNG");
+  /* transform: translate(10px, 15px); */
+}
+.project[data-project="5"] {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../../../public/assets/images/portfolio/AllbriteFamily.jpg");
+}
+.project[data-project="7"] {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../../../public/assets/images/portfolio/intent.png");
+  /* mask-image: linear-gradient(to left, white 0%, transparent 50%, white 100%); */
+}
+
+.project:hover {
+  transform: scale(1.02) !important;
+  opacity: 1;
+  color: var(--h2);
+  box-shadow: 0 0 20px 3px #ff512f;
+  /* grid-area: 1 / 1 / 5 /7 !important; */
+}
+.project:hover .projectGrid {
+  gap: 1.2rem;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.absolute {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  animation-name: rotate, fade-in;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite, 1;
+  animation-timing-function: linear;
+  transition-timing-function: linear;
+  opacity: 0;
+  transition: all 0.5s;
+}
+/* .absolute:hover {
+  opacity: 1;
+} */
+.on {
+  opacity: 0.75;
+}
+
+.nextjs {
+  left: -20%;
+  top: 20%;
+  background-image: url("../../../public/assets/images/tech/next.png");
+}
+
+.react {
+  width: 175px;
+  height: 155px;
+  left: -20%;
+  top: 50%;
+  background-image: url("../../../public/assets/images/tech/react.png");
+}
+.html {
+  width: 175px;
+  height: 155px;
+  left: -20%;
+  top: 50%;
+  background-image: url("../../../public/assets/images/tech/html5.png");
+}
+
+.ts {
+  left: -20%;
+  top: 75%;
+  z-index: 999999999;
+  background-image: url("../../../public/assets/images/tech/typescript.png");
+}
+.js {
+  left: -20%;
+  top: 75%;
+  background-image: url("../../../public/assets/images/tech/js.jpg");
+}
+
+.go {
+  left: 103%;
+  top: 70%;
+  background-image: url("../../../public/assets/images/tech/golang.png");
+  height: 250px;
+  width: 250px;
+}
+
+.pocketbase {
+  left: 105%;
+  top: 30%;
+  background-image: url("../../../public/assets/images/tech/pocketbase.png");
+}
+.supabase {
+  left: 105%;
+  top: 30%;
+  background-image: url("../../../public/assets/images/tech/supabase.png");
+}
+
+.css {
+  left: 105%;
+  top: 50%;
+  background-image: url("../../../public/assets/images/tech/css.png");
+}
+.sc {
+  left: 105%;
+  top: 50%;
+  background-image: url("../../../public/assets/images/tech/styled-components.png");
+}
+.cssmod {
+  left: 105%;
+  top: 50%;
+  background-image: url("../../../public/assets/images/tech/css-modules-logo.png");
+}
+
+.chosenProjectLink {
+  width: 50%;
+  transition: all 0.2s;
+  position: relative;
+}
+.chosenProjectLink::after {
+  content: "ENTER";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.4rem;
+  opacity: 0;
+  transition: all 0.2s;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chosenProjectLink:hover::after {
+  opacity: 1;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+}
+
+.chosenProjectLink:hover {
+  /* box-shadow: 0 0 20px 3px #ff512f; */
+  /* transform: scale(1.05); */
+}
+
+.descBox {
+  height: 100%;
+  padding: 4.8rem 4.8rem 4.8rem 0;
+  overflow-y: scroll;
+}
+.chosenProjectTitle {
+  font-size: 4rem;
+  text-align: center;
+}
+.chosenProjectDesc {
+  font-size: 2rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.show {
+  opacity: 1 !important;
+  pointer-events: auto;
+  /* visibility: ; */
+  /* z-index: 1; */
+}

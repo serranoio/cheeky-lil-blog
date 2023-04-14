@@ -1,0 +1,16 @@
+.desc {
+  /* position: absolute; */
+  padding: 19.6rem 0;
+  display: block;
+  color: var(--p);
+  font-size: 2.4rem;
+  opacity: 0;
+  transition: all 1.5s;
+  word-wrap: normal;
+  width: 100%;
+}
+
+.show {
+  /* display: block; */
+  opacity: 1;
+}

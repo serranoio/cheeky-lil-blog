@@ -10,7 +10,7 @@
 .postTitle {
   font-size: 6.4rem;
   /* position: absolute; */
-  color: var(--sixth);
+  color: var(--h1);
   text-align: center;
   margin: 6rem 0;
   position: relative;
@@ -20,13 +20,13 @@
   position: absolute;
   top: 3%;
   left: 50%;
-  color: var(--sixth-off);
+  color: var(--h2);
   transform: translateX(-50%);
   z-index: 9;
 }
 .date {
   font-size: 2.4rem;
-  color: var(--sixth-off);
+  color: var(--h2);
   margin-bottom: 1.2rem;
   display: flex;
   justify-content: space-between;
@@ -34,16 +34,16 @@
 .postBody {
   font-size: 3rem;
   line-height: 1.5;
-  color: var(--sixth-off);
+  color: var(--p);
   /* word-break: break-all; */
 }
 
 .update {
   cursor: pointer;
   background: transparent;
-  border: 2px solid var(--sixth);
+  border: 2px solid var(--p);
   padding: 1.2rem 2.4rem;
-  color: var(--sixth);
+  color: var(--p);
   display: flex;
   align-items: center;
   gap: 1.2rem;
@@ -61,16 +61,16 @@
   transform: rotate(180deg);
 }
 .update svg {
-  color: var(--sixth);
+  color: var(--p);
   width: 24px;
   height: 24px;
 }
 .delete {
   cursor: pointer;
   background: transparent;
-  border: 2px solid var(--sixth);
+  border: 2px solid var(--p);
   padding: 1.2rem 2.4rem;
-  color: var(--sixth);
+  color: var(--p);
   display: flex;
   align-items: center;
   gap: 1.2rem;
@@ -88,7 +88,7 @@
   transform: rotate(180deg);
 }
 .delete svg {
-  color: var(--sixth);
+  color: var(--p);
   width: 24px;
   height: 24px;
 }
@@ -97,9 +97,9 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: var(--sixth);
+  color: var(--p);
   padding: 2.4rem;
-  background-color: var(--first);
+  background-color: var(--p);
   /* width: 100px; */
   /* height: 100px; */
   border-radius: 10px;

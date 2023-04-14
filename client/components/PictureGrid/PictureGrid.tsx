@@ -89,6 +89,7 @@ const PictureGrid: FC<PictureGridInterface> = ({ routerLink, list }) => {
       {list.map((post: any, i: number) => {
         return (
           <PostFigure
+            key={i}
             post={post}
             i={i}
             controlX={controlX[i]}

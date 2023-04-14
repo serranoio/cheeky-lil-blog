@@ -2,9 +2,9 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { useRouter } from "next/router";
 import React, { FC, useState, useEffect } from "react";
-import pb, { deletePost, updatePost } from "@/pocketbase/pocketbase";
+import pb, { deletePost, fileUrl, updatePost } from "@/pocketbase/pocketbase";
 import classes from "./post.module.css";
-import HtmlSVG from "@/assets/svg/HtmlSVG";
+import HtmlSVG from "../../../public/assets/svg/HtmlSVG";
 import Form from "@/components/Misc/Form";
 import PictureGrid from "@/components/PictureGrid/PictureGrid";
 import { useSelector } from "react-redux";
@@ -45,7 +45,7 @@ export default function Post() {
           body: record.body,
           created: record.created,
           topic: record.topic,
-          post_pic: `http://127.0.0.1:8090/api/files/${record.collectionId}/${record.id}/${record.post_pic}`,
+          post_pic: `${fileUrl}/${record.collectionId}/${record.id}/${record.post_pic}`,
           author: record.author,
           id: record.id,
         });
@@ -68,6 +68,8 @@ export default function Post() {
   // B: when you press the Posts link in navbar, all posts are fetched
   const [postList, changePostList] = useState([]);
 
+  console.log(fileUrl);
+
   useEffect(() => {
     pb.collection("posts")
       .getFullList()
@@ -77,7 +79,7 @@ export default function Post() {
           return [
             ...data.map((record: any, i: number) => {
               return {
-                picture: `http://127.0.0.1:8090/api/files/${record.collectionId}/${record.id}/${record.post_pic}`,
+                picture: `${fileUrl}/${record.collectionId}/${record.id}/${record.post_pic}`,
                 title: record.title,
                 recordId: record.id,
               };
@@ -98,6 +100,8 @@ export default function Post() {
       </div>
     );
   }
+
+  // END ALL POSTS CLICKED
 
   const deletePage = () => {
     if (user.isAuth) {

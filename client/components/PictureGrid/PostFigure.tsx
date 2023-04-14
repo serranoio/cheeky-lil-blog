@@ -70,6 +70,7 @@ const PostFigure: FC<PostFigureInterface> = ({
       style={{
         gridColumn: `${calculatedGridColumn}`,
       }}
+      key={i}
     >
       <figure
         data-topic={post.title}

@@ -1,0 +1,45 @@
+.section {
+  padding: 9.8rem 0;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.italics {
+}
+
+.span {
+  color: var(--quartenary);
+}
+.span2 {
+  color: var(--tertiary);
+}
+
+.about {
+  min-height: 100vh;
+  position: relative;
+}
+.desc {
+  position: absolute;
+  color: var(--p);
+  font-size: 2.4rem;
+  opacity: 0;
+  transition: all 1.5s;
+  word-wrap: normal;
+  width: 100%;
+  display: inline;
+}
+
+.show {
+  /* display: block; */
+  opacity: 1;
+}
+.title {
+  font-size: 6.4rem;
+  color: var(--h2);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.inView {
+  opacity: 1;
+}

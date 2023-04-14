@@ -1,0 +1,47 @@
+.shadow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card {
+  width: 800px;
+  height: 400px;
+  background-color: var(--secondary);
+  border-top-left-radius: var(--br);
+  border-bottom-left-radius: var(--br);
+  color: var(--h2);
+  transform-origin: bottom;
+  position: relative;
+  z-index: 999999;
+}
+
+.show {
+  opacity: 1 !important;
+  pointer-events: auto;
+}
+
+.closeModal {
+  background: transparent;
+  border: none;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  color: var(--h1);
+  font-size: 2.4rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.closeModal:hover {
+  color: var(--h2);
+}

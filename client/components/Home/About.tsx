@@ -41,7 +41,7 @@ const aboutMe: JSX.Element[] = [
     Pocketbase (for this site). I have picked up NextJS, learned Go to the
     intermediate level, and now I am ready for this next summer.
   </>,
-  <>I have learned all of this in less than one year.</>,
+  <>I have learned all of this in less than one year :).</>,
 ];
 
 const pauseScrollingStart = 800;

@@ -5,10 +5,10 @@
   justify-content: space-between;
   align-items: center;
   background: transparent;
-  color: var(--p);
+  color: var(--secondary);
   z-index: 1;
   position: relative;
-  background: none;
+  background: rgba(125, 125, 125, 0.5);
   position: absolute;
   width: 100%;
   -webkit-backdrop-filter: blur(0.5em);

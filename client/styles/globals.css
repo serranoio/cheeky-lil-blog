@@ -52,10 +52,11 @@
 
 html,
 body {
+  /* overlo */
   max-width: 100vw;
   height: 100vh;
   background-color: var(--primary);
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   font-family: "DM Mono", monospace;
   font-weight: 400;
 }

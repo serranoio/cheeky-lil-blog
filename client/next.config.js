@@ -4,7 +4,7 @@ const nextConfig = {
   images: {
     domains: ["localhost"],
   },
-  target: "serverless",
+  distDir: "out",
 };
 
 module.exports = nextConfig;

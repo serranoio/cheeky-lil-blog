@@ -60,11 +60,9 @@ const ProjectModal: FC<Props> = ({
           <Image
             width={300}
             height={300}
-            style={
-              {
-                // objectFit: "cover",
-              }
-            }
+            style={{
+              objectFit: "cover",
+            }}
             alt={chosenProject?.projectName as string}
             src={getChosenProject() as StaticImageData}
           />

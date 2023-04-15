@@ -30,13 +30,7 @@ const PostFigure: FC<PostFigureInterface> = ({
   const backgroundImage = topics.includes(post.title)
     ? { backgroundImage: "" }
     : {
-        backgroundImage: `repeating-linear-gradient(
-      45deg,
-      #49494905 0,
-      #494949 2px,
-      transparent 0,
-      transparent 50%
-    ),
+        backgroundImage: `
     linear-gradient(rgba(25, 14, 0, .3), rgba(25, 14, 0, 0.5)), url(${post.picture})`,
       };
 
@@ -70,7 +64,6 @@ const PostFigure: FC<PostFigureInterface> = ({
       style={{
         gridColumn: `${calculatedGridColumn}`,
       }}
-      key={i}
     >
       <figure
         data-topic={post.title}
@@ -79,8 +72,8 @@ const PostFigure: FC<PostFigureInterface> = ({
         }}
         style={{
           ...backgroundImage,
-          backgroundPosition: `${controlX}% ${controlY}%, center, ${controlX}% ${controlY}%`,
-          backgroundSize: `20vmin 20vmin, 100% 100%, cover`,
+          backgroundPosition: `${controlX}% ${controlY}%, ${controlX}% ${controlY}%`,
+          backgroundSize: `cover,  cover`,
           height: `${listLength <= 4 ? `100vh` : "50vh"}`,
         }}
         className={`${classes.postFigure} ${

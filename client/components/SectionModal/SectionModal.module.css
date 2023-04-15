@@ -45,3 +45,10 @@
 .closeModal:hover {
   color: var(--h2);
 }
+
+@media (max-width: 44em) {
+  .card {
+    max-width: 70rem !important;
+    height: 90rem !important;
+  }
+}

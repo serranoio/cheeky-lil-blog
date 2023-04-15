@@ -12,23 +12,23 @@
   align-items: center;
   font-size: 2.4rem;
   cursor: pointer;
-  color: var(--primary-9);
+  color: var(--h2);
 }
 
 .postFigure:hover {
-  color: var(--primary-5);
+  /* color: var(---5); */
 }
 .topicTitle {
   font-size: 6.4rem;
   text-align: center;
-  color: var(--primary-10);
+  color: var(--h1);
 }
 .postTitle {
-  color: var(--primary-10);
+  color: var(--h1);
 }
 
 .pageName {
-  color: var(--sixth-off);
+  color: var(--p);
   position: absolute;
   left: 50%;
   top: 3%;

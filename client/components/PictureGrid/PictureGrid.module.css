@@ -14,7 +14,7 @@
   height: 100%;
   height: 50vh;
   cursor: pointer;
-  color: var(--sixth);
+  color: var(--p);
 
   transition: opacity 800ms ease, background-size 800ms ease, color 800ms ease;
 
@@ -59,7 +59,7 @@
 }
 
 .postFigure:hover {
-  color: var(--sixth);
+  color: var(--p);
   background-position: 0% 0%, center, 50% 50%;
   background-size: 12vmin 12vmin, 100% 100%, cover;
   /* opacity: 0.5; */
@@ -78,7 +78,7 @@
 }
 
 .pageName {
-  color: var(--sixth-off);
+  color: var(--p);
   position: absolute;
   left: 50%;
   top: 3%;

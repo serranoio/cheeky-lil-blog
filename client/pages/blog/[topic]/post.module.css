@@ -115,8 +115,8 @@
 .confirmDelete,
 .confirmNo {
   background-color: transparent;
-  color: var(--sixth);
-  border: 2px solid var(--sixth);
+  color: var(--p);
+  border: 2px solid var(--p);
   padding: 1.2rem;
   border-radius: 4px;
   margin-top: 2.4rem;

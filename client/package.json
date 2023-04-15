@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@netlify/next": "^1.4.5",
+    "@netlify/plugin-nextjs": "^4.34.0",
     "@phosphor-icons/react": "^2.0.8",
     "@reduxjs/toolkit": "^1.9.3",
     "@types/node": "18.14.6",

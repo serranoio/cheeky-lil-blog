@@ -6,9 +6,10 @@ interface ISection {
   children: any;
   isOpened: boolean;
   open: any;
+  size: { x: number; y: number };
 }
 
-const SectionModal: FC<ISection> = ({ children, isOpened, open }) => {
+const SectionModal: FC<ISection> = ({ children, isOpened, open, size }) => {
   const variantsShadow = {
     open: {
       opacity: 1,
@@ -67,6 +68,10 @@ const SectionModal: FC<ISection> = ({ children, isOpened, open }) => {
         className={classes.card}
         id={"modal"}
         variants={variantsShown}
+        style={{
+          width: `${size.x}rem`,
+          height: `${size.y}rem`,
+        }}
       >
         {children}
         <button

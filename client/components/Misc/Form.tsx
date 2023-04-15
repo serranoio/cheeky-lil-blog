@@ -2,42 +2,26 @@ import "./Form.module.css";
 import React, { FC, useState, useRef, RefObject } from "react";
 import classes from "./Form.module.css";
 import { topics } from "@/store/data/topics";
-import Auth from "@/pocketbase/Auth";
+import { Form as FormikForm, Formik, Field } from "formik";
 
 interface FormInterface {
   action: any;
-  onClose: any;
   type: string;
   post_id: string;
   post: any;
 }
 
 // Form: handles update and create
-const Form: FC<FormInterface> = ({ action, onClose, type, post_id, post }) => {
-  const [chosenTopic, updateChosenTopic] = useState("");
-
-  const titleRef = useRef() as RefObject<HTMLInputElement>;
-  const bodyRef = useRef() as RefObject<HTMLTextAreaElement>;
-  const authorRef = useRef() as RefObject<HTMLInputElement>;
-
+const Form: FC<FormInterface> = ({ action, type, post_id, post }) => {
   // we have to input title, body, author into form
   // during update
-  const [titleValue, setTitleValue] = useState(
-    type === "create" ? "" : post.title
-  );
-  const [bodyValue, setBodyValue] = useState(
-    type === "create" ? "" : post.body
-  );
-  const [authorValue, setAuthorValue] = useState(
-    type === "create" ? "" : post.author
-  );
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    const title = titleRef?.current?.value!;
-    const body = bodyRef?.current?.value!;
-    const author = authorRef?.current?.value!;
-
+  const handleSubmit = (
+    topic: string,
+    body: string,
+    title: string,
+    author: string
+  ) => {
     const formData = new FormData();
 
     const picInput: HTMLInputElement = document.querySelector(
@@ -47,7 +31,7 @@ const Form: FC<FormInterface> = ({ action, onClose, type, post_id, post }) => {
     for (let file of picInput.files!) {
       formData.append("post_pic", file);
     }
-    formData.append("topic", chosenTopic);
+    formData.append("topic", topic);
     formData.append("body", body);
     formData.append("title", title);
     formData.append("author", author);
@@ -58,89 +42,77 @@ const Form: FC<FormInterface> = ({ action, onClose, type, post_id, post }) => {
       action(formData, post_id);
     }
 
-    window.location.reload();
-
     // const title = titleRef?.current?.value!;
   };
 
-  const auth = <Auth onClose={onClose} />;
+  const allTopics = topics.map((topic: string, i: number) => {
+    return (
+      <option key={topic} value={topic} id={topic}>
+        {topic}
+      </option>
+    );
+  });
+  allTopics.push(
+    <option key={"miscillaneous"} value={"miscillaneous"} id={"miscillaneous"}>
+      miscillaneous
+    </option>
+  );
+
   return (
     <figure className={classes.window}>
-      {auth}
-      <form onSubmit={handleSubmit} className={classes.form}>
-        <h3 className={classes.formTitle}>
-          {type === "create" ? "Create a post!" : "Update"}{" "}
-        </h3>
-        <div>
-          {topics.map((topic: string, i: number) => {
-            return (
-              <>
-                <input
-                  onChange={(e) => updateChosenTopic(e.target.value)}
-                  type="radio"
-                  id={topic}
-                  name="topic"
-                  value={topic}
-                />
-                <label htmlFor={topic}>{topic}</label>
-              </>
-            );
-          })}
-          <input
-            onChange={(e) => updateChosenTopic(e.target.value)}
-            type="radio"
-            id={"misc"}
-            name="topic"
-            value={"misc"}
-          />
-          <label htmlFor={"misc"}>{"miscillaneous"}</label>
-        </div>
-        <div>
-          <label htmlFor="pic">Upload picture</label>
-          <input id="pic" type="file" />
-        </div>
-        <div>
-          <label htmlFor="title">Title</label>
-          <input
-            id="title"
-            ref={titleRef}
-            value={titleValue}
-            onChange={(e) => {
-              setTitleValue(e.target.value);
-            }}
-          />
-        </div>
-        <div>
-          <label htmlFor="body">body</label>
-          <textarea
-            rows={10}
-            cols={70}
-            id="body"
-            value={bodyValue}
-            ref={bodyRef}
-            onChange={(e) => {
-              setBodyValue(e.target.value);
-            }}
-          />
-        </div>
-        <div>
-          <label htmlFor="author">author</label>
-          <input
-            id="author"
-            ref={authorRef}
-            value={authorValue}
-            onChange={(e) => {
-              setAuthorValue(e.target.value);
-            }}
-          />
-        </div>
-        <button className={classes.submit} type="submit">
-          {type === "create" ? "Post" : "Update"}{" "}
-        </button>
-      </form>
-      <button className={classes.close} onClick={onClose.bind(null, false)}>
-        Close
-      </button>
+      <Formik
+        onSubmit={(values, actions) => {
+          handleSubmit(values.topic, values.body, values.title, values.author);
+        }}
+        initialValues={{
+          topic: "",
+          title: post.title,
+          body: type === "create" ? "" : post.body,
+          author: type === "create" ? "" : post.author,
+        }}
+      >
+        <FormikForm className={classes.form}>
+          <h3 className={classes.formTitle}>
+            {type === "create" ? "Create a post!" : "Update"}{" "}
+          </h3>
+          <div>
+            <Field
+              id="topic"
+              name="topic"
+              as="select"
+              style={{
+                fontSize: "1.6rem",
+                padding: ".6rem 2.4rem",
+                border: "2px solid var(--h2)",
+                color: "var(--h2)",
+                background: "none",
+                cursor: "pointer",
+              }}
+            >
+              {allTopics}
+            </Field>
+          </div>
+          <div>
+            <label htmlFor="pic">Upload picture</label>
+            <input id="pic" type="file" />
+          </div>
+          <div>
+            <label htmlFor="title">Title</label>
+            <Field id="title" name="title" />
+          </div>
+          <div>
+            <label htmlFor="body">body</label>
+            <Field rows={10} cols={70} id="body" name="body" as="textarea" />
+          </div>
+          <div>
+            <label htmlFor="author">author</label>
+            <Field id="author" name="author" />
+          </div>
+          <button className={classes.submit} type="submit">
+            {type === "create" ? "Post" : "Update"}{" "}
+          </button>
+        </FormikForm>
+      </Formik>
     </figure>
   );
 };

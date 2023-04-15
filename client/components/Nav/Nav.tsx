@@ -33,24 +33,22 @@ const Nav: FC = () => {
     setOpenLogin(openOrClose);
   };
 
-  const Create = <CreatePost onClose={handleModal} />;
+  // const modal = openLogin ? (
+  //   <div
+  //     onClick={(e) => {
+  //       if ((e.target as HTMLElement).closest("figure")) {
+  //         return; // if we clicked it, we want it to return
+  //       }
 
-  const modal = openLogin ? (
-    <div
-      onClick={(e) => {
-        if ((e.target as HTMLElement).closest("figure")) {
-          return; // if we clicked it, we want it to return
-        }
-
-        handleModal(false);
-      }}
-      className={classes.modal}
-    >
-      {Create}
-    </div>
-  ) : (
-    <></>
-  );
+  //       handleModal(false);
+  //     }}
+  //     className={classes.modal}
+  //   >
+  //     {Create}
+  //   </div>
+  // ) : (
+  //   <></>
+  // );
 
   return (
     <nav className={classes.nav}>
@@ -77,13 +75,7 @@ const Nav: FC = () => {
             </li>
           );
         })}
-        <li className={classes.li}>
-          <h3 className={classes.h3} onClick={handleModal.bind(null, true)}>
-            Create
-          </h3>
-        </li>
       </ol>
-      {modal}
     </nav>
   );
 };

@@ -6,23 +6,35 @@ import { useState } from "react";
 import { mapper } from "@/functions/misc";
 import { topics } from "@/store/data/topics";
 import PictureGrid from "@/components/PictureGrid/PictureGrid";
+import CreatePost from "@/components/CreatePost/CreatePost";
 
 // Blog: /blog. This is the homepage for the blog. It just describes the blog.
 export default function Blog() {
+  const [openLogin, setOpenLogin] = useState(false);
+  const create = <CreatePost isOpened={openLogin} open={setOpenLogin} />;
+
   return (
     <div className={classes.viewport}>
       <h1 className={classes.h1}>The Blog</h1>
-      <p className={classes.p}>
-        This day is priceless. All the money in the world can never bring today
-        back again. So seize it, save it, and honor it.
+      <p
+        className={classes.p}
+        style={{
+          display: "block",
+          marginBottom: "2.4rem",
+          fontSize: "3rem",
+        }}
+      >
+        This day is priceless {String.fromCodePoint(0x274c)}
+        {String.fromCodePoint(0x1f4b8)}. All the money in the world can never
+        bring today back again. So seize it, save it, and honor it.
         &nbsp;&nbsp;&nbsp;&nbsp;-{" "}
         <span style={{ fontSize: "2.4rem" }}>Robin Sharma</span>
       </p>
       <p className={classes.p}>
         That is my favorite quote. I live by it because everything in your life
         matters, <strong>especially</strong> this day. You can create a life of
-        greatness by just compounding the little things in your life, starting
-        out with every day.
+        greatness {String.fromCodePoint(0x1f3c6)} by just compounding the little
+        things in your life, starting out with every day.
       </p>
       <p className={classes.p}>
         This leads me to say, before reading anything on the web, remember that
@@ -74,12 +86,24 @@ export default function Blog() {
         </li>
       </ul>
       <p className={classes.p} style={{ marginTop: "2rem" }}>
-        You could've entered the blog already from the nav bar lol, but if you
+        You could've entered the blog already from the nav bar haha, but if you
         made it this far, here's a minimalistic yet fancy link.
       </p>
-      <Link href="/blog/topic" className={classes.button}>
-        Enter <span>&rarr;</span>
-      </Link>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <Link href="/blog/topic" className={classes.button}>
+          Welcome to my blog <span>&rarr;</span>
+        </Link>
+
+        <button
+          className={classes.create}
+          onClick={() => {
+            setOpenLogin((prevState: boolean) => !prevState);
+          }}
+        >
+          Or create a post
+        </button>
+      </div>
+      {create}
     </div>
   );
 }

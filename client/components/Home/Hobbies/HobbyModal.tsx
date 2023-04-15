@@ -62,7 +62,11 @@ const HobbyModal: FC<Props> = ({
   };
 
   return (
-    <SectionModal isOpened={isHobbyOpened} open={openHobby}>
+    <SectionModal
+      size={{ x: 80, y: 40 }}
+      isOpened={isHobbyOpened}
+      open={openHobby}
+    >
       <div className={classes.positionAll}>
         <div className={classes.mainContent}>
           <div className={classes.image}>

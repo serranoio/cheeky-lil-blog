@@ -4,19 +4,17 @@ import { topics } from "@/store/data/topics";
 import { createPost } from "@/pocketbase/pocketbase";
 import Form from "../Misc/Form";
 import { create } from "domain";
+import SectionModal from "../SectionModal/SectionModal";
 
 interface CreatePostInterface {
-  onClose: any;
+  isOpened: any;
+  open: any;
 }
-const CreatePost: FC<CreatePostInterface> = ({ onClose }) => {
+const CreatePost: FC<CreatePostInterface> = ({ isOpened, open }) => {
   return (
-    <Form
-      action={createPost}
-      onClose={onClose}
-      type="create"
-      post={{}}
-      post_id={""}
-    />
+    <SectionModal isOpened={isOpened} open={open} size={{ x: 80, y: 70 }}>
+      <Form action={createPost} type="create" post={{}} post_id={""} />
+    </SectionModal>
   );
 };
 

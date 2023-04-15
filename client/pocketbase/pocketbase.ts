@@ -20,6 +20,7 @@ export const createPost = async (formData: FormData) => {
     const record = await pb.collection("posts").create(formData);
   } catch (e: any) {
   } finally {
+    window.location.reload();
   }
 };
 
@@ -28,6 +29,7 @@ export const updatePost = async (formData: FormData, recordID: string) => {
     const record = await pb.collection("posts").update(recordID, formData);
   } catch (e: any) {
   } finally {
+    window.location.reload();
   }
 };
 
@@ -36,6 +38,7 @@ export const deletePost = async (recordID: string) => {
     await pb.collection("posts").delete(recordID);
   } catch (e: any) {
   } finally {
+    window.location.reload();
   }
 };
 

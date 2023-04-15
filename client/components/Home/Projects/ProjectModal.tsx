@@ -50,7 +50,11 @@ const ProjectModal: FC<Props> = ({
   };
 
   return (
-    <SectionModal isOpened={isProjectOpened} open={openProject}>
+    <SectionModal
+      isOpened={isProjectOpened}
+      open={openProject}
+      size={{ x: 80, y: 40 }}
+    >
       <div className={classes.flexModal}>
         <a
           href={chosenProject?.link}

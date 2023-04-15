@@ -6,13 +6,11 @@ import { useDispatch } from "react-redux";
 import { authUserLogin } from "@/store/UserAuth";
 import { useSelector } from "react-redux";
 
-interface AuthInterface {
-  onClose: any;
-}
+interface AuthInterface {}
 
 // Auth:
 // implements auth
-const Auth: FC<AuthInterface> = ({ onClose }) => {
+const Auth: FC<AuthInterface> = () => {
   const [isLoading, setLoading] = useState(false);
   const emailInputRef = useRef() as RefObject<HTMLInputElement>;
   const passwordInputRef = useRef() as RefObject<HTMLInputElement>;
@@ -43,7 +41,6 @@ const Auth: FC<AuthInterface> = ({ onClose }) => {
     }
   };
 
-  console.log(user.isAuth);
   return (
     <figure className={classes.signinForm}>
       <form onSubmit={loginSigninHandler}>
@@ -73,9 +70,6 @@ const Auth: FC<AuthInterface> = ({ onClose }) => {
         </button>
         {isLoading ? <Spinner /> : <></>}
       </form>
-      <button className={classes.close} onClick={onClose.bind(null, false)}>
-        Close
-      </button>
     </figure>
   );
 };

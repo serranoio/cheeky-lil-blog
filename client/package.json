@@ -21,6 +21,7 @@
     "cross-fetch": "^3.1.5",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
+    "formik": "^2.2.9",
     "framer-motion": "^10.11.2",
     "next": "13.2.3",
     "pocketbase": "^0.12.0",

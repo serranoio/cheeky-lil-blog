@@ -8,6 +8,8 @@ import HtmlSVG from "../../../public/assets/svg/HtmlSVG";
 import Form from "@/components/Misc/Form";
 import PictureGrid from "@/components/PictureGrid/PictureGrid";
 import { useSelector } from "react-redux";
+import DeletePage from "@/components/Post/DeletePage";
+import SectionModal from "@/components/SectionModal/SectionModal";
 
 // post:
 // A: When a post is clicked, the individual post is fetched
@@ -29,7 +31,6 @@ export default function Post() {
     id: "",
   }); // a post
   useEffect(() => {
-    const topic = router.query.topic;
     if (router.query.post === undefined) {
       return;
     }
@@ -68,8 +69,6 @@ export default function Post() {
   // B: when you press the Posts link in navbar, all posts are fetched
   const [postList, changePostList] = useState([]);
 
-  console.log(fileUrl);
-
   useEffect(() => {
     pb.collection("posts")
       .getFullList()
@@ -101,8 +100,6 @@ export default function Post() {
     );
   }
 
-  // END ALL POSTS CLICKED
-
   const deletePage = () => {
     if (user.isAuth) {
       router.push("/blog");
@@ -112,41 +109,6 @@ export default function Post() {
   const closeDeletePage = () => {
     openDeletePageModal(false);
   };
-
-  const deletePageModal = (
-    <div className={classes.shadow}>
-      <div className={classes.deletePage}>
-        <p>Are you sure you want to delete?</p>
-        <p>{user.isAuth ? "" : `Press "Create" to log into admin to delete`}</p>
-        <div>
-          {user.isAuth ? (
-            <>
-              <button
-                onClick={() => {
-                  closeDeletePage();
-                  deletePage();
-                }}
-                className={classes.confirmDelete}
-                disabled={!user.isAuth}
-              >
-                Yes
-              </button>
-              <button
-                onClick={() => {
-                  closeDeletePage();
-                }}
-                className={classes.confirmNo}
-              >
-                No
-              </button>
-            </>
-          ) : (
-            <></>
-          )}
-        </div>
-      </div>
-    </div>
-  );
 
   return (
     <div className={classes.main}>
@@ -183,8 +145,25 @@ export default function Post() {
           })}
         </span>
       </p>
-      {deletePageModalState ? deletePageModal : <></>}
-      {showModal ? (
+      <SectionModal
+        isOpened={deletePageModalState}
+        open={openDeletePageModal}
+        size={{ x: 80, y: 40 }}
+      >
+        <DeletePage
+          user={user}
+          closeDeletePage={closeDeletePage}
+          deletePage={deletePage}
+        />
+      </SectionModal>
+      <SectionModal
+        isOpened={showModal}
+        open={setShowModal}
+        size={{ x: 80, y: 70 }}
+      >
+        <Form type="update" action={updatePost} post_id={post.id} post={post} />
+      </SectionModal>
+      {/* {showModal ? (
         <div className={classes.shadow}>
           <Form
             onClose={closeUpdate}
@@ -196,7 +175,7 @@ export default function Post() {
         </div>
       ) : (
         <></>
-      )}
+      )} */}
       <p className={classes.postBody}>{post.body}</p>
     </div>
   );

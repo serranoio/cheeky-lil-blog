@@ -141,3 +141,19 @@
   visibility: hidden;
   opacity: 0 !important;
 }
+
+@media (max-width: 44em) {
+  .hobbiesGrid {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: repeat(9, 1fr) !important;
+  }
+  .introduceHobbies {
+    grid-row: span 1 !important;
+    grid-column: 1 !important;
+  }
+  .hobby,
+  .hobbyFiller {
+    grid-row: span 1;
+    grid-column: 1;
+  }
+}

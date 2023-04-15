@@ -18,7 +18,7 @@
 }
 
 .section {
-  padding: 9.8rem 0;
+  padding: 9.8rem 2.4rem;
   max-width: 120rem;
   margin: 0 auto;
   position: relative;
@@ -283,4 +283,21 @@
   pointer-events: auto;
   /* visibility: ; */
   /* z-index: 1; */
+}
+
+@media (max-width: 44em) {
+  .section {
+    height: 100%;
+  }
+
+  .projectGrid {
+    height: 125vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+  }
+  .project {
+    grid-column: 1 !important;
+    grid-row: span 1 !important;
+    /* grid-area: span 3; */
+  }
 }

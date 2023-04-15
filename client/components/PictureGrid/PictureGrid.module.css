@@ -86,3 +86,10 @@
   font-size: 2.4rem;
   font-style: italic;
 }
+
+@media (max-width: 44em) {
+  .postsGrid {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 1fr !important;
+  }
+}

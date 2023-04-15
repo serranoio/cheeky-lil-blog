@@ -161,3 +161,16 @@
 .absolute:hover {
   opacity: 1;
 }
+
+/* 700em */
+@media (max-width: 44em) {
+  .grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .background {
+    width: 100vw;
+    height: 50vh;
+  }
+}

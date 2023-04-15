@@ -77,14 +77,7 @@ export const allHobbies = [
     "High producing individuals are individuals with high energy. Maximally effective people are in shape.",
     coding
   ),
-  new Hobby(
-    "Podcast",
-    "In order to be influenci",
-    5,
-    "goals",
-    "impact",
-    coding
-  ),
+  new Hobby("Cooking", ">:)", 5, "goals", "impact", coding),
   new Hobby(
     "Public Speaking",
     "In order to be influencial, I must be good at public speaking. I love challenging myself to captivate the audience in every story I tell.",

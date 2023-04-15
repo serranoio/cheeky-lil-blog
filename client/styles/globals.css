@@ -94,3 +94,9 @@ html {
 ::-webkit-scrollbar-corner {
   background: rgba(0, 0, 0, 0.5);
 }
+
+@media (max-width: 44em) {
+  html {
+    font-size: 43.5%;
+  }
+}

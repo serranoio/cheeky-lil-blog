@@ -10,7 +10,6 @@ interface IDeletePage {
 
 const DeletePage: FC<IDeletePage> = ({ user, closeDeletePage, deletePage }) => {
   const auth = <Auth />;
-
   return (
     <div className={classes.deletePage}>
       <div>

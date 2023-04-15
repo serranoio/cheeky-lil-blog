@@ -31,9 +31,15 @@ export default function Topic() {
           return [
             // ...prevPosts,
             ...data
-              .filter(
-                (record: any, i: number) => record.topic === router.query.topic
-              )
+              .filter((record: any, i: number) => {
+                if (
+                  record.topic.replace(/\s/g, "") ===
+                  String(router.query.topic).replace(/\s/g, "")
+                ) {
+                  console.log(record.title);
+                }
+                return record.topic === router.query.topic;
+              })
               .map((record: any, i: number) => {
                 return {
                   picture: `${fileUrl}/${record.collectionId}/${record.id}/${record.post_pic}`, // pb picture's are served on this link

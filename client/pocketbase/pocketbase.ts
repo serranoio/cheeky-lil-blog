@@ -38,7 +38,6 @@ export const deletePost = async (recordID: string) => {
     await pb.collection("posts").delete(recordID);
   } catch (e: any) {
   } finally {
-    window.location.reload();
   }
 };
 

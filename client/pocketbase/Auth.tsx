@@ -1,6 +1,6 @@
 import pb from "./pocketbase";
 import classes from "./Auth.module.css";
-import React, { FC, RefObject, useRef, useState } from "react";
+import React, { FC, RefObject, useEffect, useRef, useState } from "react";
 import Spinner from "@/components/Misc/Spinner";
 import { useDispatch } from "react-redux";
 import { authUserLogin } from "@/store/UserAuth";
@@ -17,6 +17,11 @@ const Auth: FC<AuthInterface> = () => {
   const dispatch = useDispatch();
 
   const user = useSelector((state: any) => state.userReducer);
+
+  useEffect(() => {
+    console.log(pb.authStore.model);
+    dispatch(authUserLogin(pb.authStore.model));
+  }, [pb]);
 
   const loginSigninHandler = async (e: any) => {
     if (user.isAuth) {

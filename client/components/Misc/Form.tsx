@@ -3,6 +3,7 @@ import React, { FC, useState, useRef, RefObject } from "react";
 import classes from "./Form.module.css";
 import { topics } from "@/store/data/topics";
 import { Form as FormikForm, Formik, Field } from "formik";
+import Select from "react-select";
 
 interface FormInterface {
   action: any;
@@ -22,6 +23,8 @@ const Form: FC<FormInterface> = ({ action, type, post_id, post }) => {
     title: string,
     author: string
   ) => {
+    console.log(topic);
+
     const formData = new FormData();
 
     const picInput: HTMLInputElement = document.querySelector(
@@ -31,6 +34,7 @@ const Form: FC<FormInterface> = ({ action, type, post_id, post }) => {
     for (let file of picInput.files!) {
       formData.append("post_pic", file);
     }
+
     formData.append("topic", topic);
     formData.append("body", body);
     formData.append("title", title);
@@ -62,6 +66,8 @@ const Form: FC<FormInterface> = ({ action, type, post_id, post }) => {
     <figure className={classes.window}>
       <Formik
         onSubmit={(values, actions) => {
+          console.log(values);
+
           handleSubmit(values.topic, values.body, values.title, values.author);
         }}
         initialValues={{
@@ -79,7 +85,7 @@ const Form: FC<FormInterface> = ({ action, type, post_id, post }) => {
             <Field
               id="topic"
               name="topic"
-              as="select"
+              component="select"
               style={{
                 fontSize: "1.6rem",
                 padding: ".6rem 2.4rem",

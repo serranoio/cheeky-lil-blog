@@ -5,14 +5,14 @@
   justify-content: space-between;
   align-items: center;
   background: transparent;
-  color: var(--secondary);
+  color: var(--p);
   z-index: 1;
   position: relative;
-  background: rgba(125, 125, 125, 0.5);
+  background: rgba(15, 16, 18, 0.5);
   position: absolute;
   width: 100%;
-  -webkit-backdrop-filter: blur(0.5em);
-  backdrop-filter: blur(0.5em);
+  -webkit-backdrop-filter: blur(0.9em);
+  backdrop-filter: blur(0.9em);
 }
 
 .content {

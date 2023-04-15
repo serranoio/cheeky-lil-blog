@@ -5,11 +5,11 @@ import { Project } from "@/functions/project";
 import Image, { StaticImageData } from "next/image";
 import allbrite from "../../../public/assets/images/portfolio/AllbriteFamily.jpg";
 import morning from "../../../public/assets/images/morning-sun.jpg";
-import intent from "../../../public/assets/images/portfolio/intent.png";
-import betsygiron from "../../../public/assets/images/portfolio/betsygiron.png";
-import portfolio from "../../../public/assets/images/portfolio/Davidportfolio.png";
-import mapsWithFriends from "../../../public/assets/images/portfolio/mapswithfriends.png";
-import techChad from "../../../public/assets/images/portfolio/techchad.png";
+import intent from "../../../public/assets/images/portfolio/intent.jpg";
+import betsygiron from "../../../public/assets/images/portfolio/betsygiron.jpg";
+import portfolio from "../../../public/assets/images/portfolio/Davidportfolio.jpg";
+import mapsWithFriends from "../../../public/assets/images/portfolio/mapswithfriends.jpg";
+import techChad from "../../../public/assets/images/portfolio/techchad.jpg";
 import SectionModal from "@/components/SectionModal/SectionModal";
 
 interface Props {

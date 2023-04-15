@@ -100,7 +100,6 @@ const Projects = () => {
               className={classes.project}
               key={i}
               style={{
-                backgroundImage: `linear-gradient(green, white) url('public/cookbook.PNG')`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 gridArea: project.area,

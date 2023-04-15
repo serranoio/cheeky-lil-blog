@@ -62,7 +62,7 @@
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.7)
     ),
-    url("../../../public/assets/images/portfolio/davidportfolio.jpg");
+    url("../../../public/assets/images/portfolio/Davidportfolio.jpg");
 }
 .project[data-project="1"] {
   background-image: linear-gradient(

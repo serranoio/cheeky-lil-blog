@@ -79,7 +79,7 @@ export const allProjects = [
   new Project(
     "1/ 6/ 4/ 11",
     "first portfolio",
-    "https://davidserrano.dev/",
+    "https://davidserranoio.netlify.app/",
     [types.JS, types.HTML, types.CSS, types.RESPONSIVE],
     "This is my first ever project which I made, and it took me a week from ",
     0
@@ -129,7 +129,7 @@ export const allProjects = [
     "Maps With Friends",
     "https://allbritefamily.netlify.app/",
     [types.REACT, types.CSS, types.SUPABASE, types.TS],
-    "In my software engineering class at UIC, CS 440, we had to make a project. We decided to make our version of GeoGuessr! We were put into teams of 4, and I contributed to make basically the entire UI apart from the game and how section, most of the backend with profiles and login.",
+    "In my software engineering class at UIC, CS 440, we had to make a project. We decided to make our version of GeoGuessr! We were put into teams of 4, and I contributed to make basically the entire UI apart from the game and how section. I made most of the backend with profiles and login.",
     6
   ),
   new Project(

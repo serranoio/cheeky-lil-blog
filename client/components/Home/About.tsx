@@ -6,42 +6,69 @@ import AboutShow from "../AboutShow/AboutShow";
 
 const aboutMe: JSX.Element[] = [
   <>
-    In September of 2021, I stumbled across a book called the 7 Habits of Highly
-    Effective People. Slowly but surely, it opened up my eyes to a whole new
-    world {String.fromCodePoint(0x1f30d)}. It created a reading habit for me in
-    which I decided to read a book called the 5 AM Club.
+    In September of 2021, I <i className={classes.quartenary}>stumbled</i>{" "}
+    across a book called the{" "}
+    <i>
+      {" "}
+      <a
+        href="https://www.amazon.com/Habits-Highly-Effective-People/dp/1471131823/ref=sr_1_6?keywords=the+7+habits+of+highly+effective&qid=1681654315&sprefix=The+7+habi%2Caps%2C94&sr=8-6"
+        target="_blank"
+      >
+        7 Habits of Highly Effective People{" "}
+      </a>
+    </i>
+    Slowly but surely, it <span className={classes.tertiary}>opened</span> up my
+    eyes to a whole new world {String.fromCodePoint(0x1f30d)}. It created a
+    reading habit for me in which I decided to read a book called{" "}
+    <i>
+      <a
+        href="https://www.amazon.com/AM-Club-Morning-Elevate-Life/dp/1443460710/ref=sr_1_1?crid=31HM6KCE2N0AA&keywords=the+5+am+club&qid=1681654296&sprefix=the+5+am+club%2Caps%2C142&sr=8-1"
+        target="_target"
+      >
+        The 5 AM Club
+      </a>
+    </i>
+    .
   </>,
   <>
     All of the literature pointed to fact that every{" "}
     <i className={classes.italics}>single</i>
-    <span className={classes.span}> granular </span> detail in your life matters
-    because it has the power to{" "}
-    <span className={classes.span2}> compound </span> to create the person you
-    are meant to be. {"\u26A1"}
+    <span className={classes.quartenary}> granular </span> detail in your life
+    matters because it has the power to{" "}
+    <span className={classes.tertiary}> compound </span> to create the person
+    you are meant to be. {"\u26A1"}
   </>,
   <>
-    I embodied this principle by making an oath to myself to wake up at 5 am at
-    every single weekday for the rest of my life {String.fromCodePoint(0x1f31e)}
-    . This gargantuan habit transformed every single facet of my life,
-    especially coding.
+    I embodied this principle by making an{" "}
+    <span className={classes.quartenary}>oath</span> to myself to wake up at{" "}
+    <span className={classes.tertiary}>5 AM</span> at every single weekday for
+    the rest of my life {String.fromCodePoint(0x1f31e)}. This gargantuan habit
+    transformed every single facet of my life, especially coding.
   </>,
   <>
     Before the semester ended, I created a plan for the summer to learn web
-    development from the ground up. I had already learned JavaScript by coding
-    every day over winter break, but I still had a long journey ahead of me.
+    development from the ground up {String.fromCodePoint(0x1f60e)}. I had
+    already learned JavaScript by coding every day over winter break, but I
+    still had a <i>long</i> <span className={classes.tertiary}>journey</span>{" "}
+    ahead of me.
   </>,
   <>
     By the end of summer, I learned TypeScript, HTML, CSS, React and made some
-    pretty fire projects {String.fromCodePoint(0x1f525)} by waking up at 5 am
+    pretty fire projects {String.fromCodePoint(0x1f525)} by waking up at{" "}
+    <span className={classes.tertiary}>5 AM </span>
     every weekday, going to the gym, then coding from 9-5.
   </>,
   <>
-    Transitioning over to today's date, April 14th, 2023, I can proudly say that
-    i'm a fullstack developer now using Supabase for multiple projects and
-    Pocketbase (for this site). I have picked up NextJS, learned Go to the
-    intermediate level, and now I am ready for this next summer.
+    {String.fromCodePoint(0x23e9)} Fast foward to today's date, April 14th, 2023{" "}
+    I can proudly say that i'm a <i>fullstack</i> developer now using Supabase
+    for multiple projects and Pocketbase (for this site). I have picked up
+    NextJS, learned Go to the intermediate level, and now I am ready for this
+    next summer {String.fromCodePoint(0x1f98d)}.
   </>,
-  <>I have learned all of this in less than one year :).</>,
+  <>
+    I have learned all of this in <i>less</i> than one year{" "}
+    {String.fromCodePoint(0x1f601)}.
+  </>,
 ];
 
 const pauseScrollingStart = 800;

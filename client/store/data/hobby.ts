@@ -79,7 +79,7 @@ export const allHobbies = [
     "I do a 10 minute HIIT workout everyday, weightlift 5-6 times a week. I want to start doing yoga. I want to get an ice bath so I can be more temperature resistant.",
     4,
     "My goal is to be able to rep 225 lb on the bench, to put on 2 45 plates on pull-ups, and to be able to squat 275 by the end of this year. I want to be 65 and jacked.",
-    "High producing individuals are individuals with high energy. Maximally effective people are in shape.",
+    "High producing individuals are individuals with high energy. I want to produce as much as I can!",
     finance
   ),
   new Hobby(
@@ -95,7 +95,7 @@ export const allHobbies = [
     "In order to be influencial, I must be good at public speaking. I love challenging myself to captivate the audience in every story I tell.",
     6,
     "I am in this club called Toastmasters. My goal is to win Toastmasters International for the international speech contest.",
-    "I want to be influencial.",
+    "I want my word to ripple through multiple generations.",
     publico
   ),
   new Hobby(

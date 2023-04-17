@@ -68,7 +68,7 @@ const aboutMe: JSX.Element[] = [
   </>,
   <>
     I have learned all of this in <i>less</i> than one year{" "}
-    {String.fromCodePoint(0x1f601)}.
+    {String.fromCodePoint(0x1f92f)}.
   </>,
 ];
 

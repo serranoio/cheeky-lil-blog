@@ -127,7 +127,7 @@ export const allProjects = [
   new Project(
     "8/ 8/ 14/ 11",
     "Maps With Friends",
-    "http://3.144.121.210:3000/",
+    "http://mwf.world/",
     [types.REACT, types.CSS, types.SUPABASE, types.TS],
     "In my software engineering class at UIC, CS 440, we had to make a project. We decided to make our version of GeoGuessr! We were put into teams of 4, and I contributed to make basically the entire UI apart from the game and how section. I made most of the backend with profiles and login.",
     6

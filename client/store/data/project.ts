@@ -81,7 +81,7 @@ export const allProjects = [
     "first portfolio",
     "https://davidserranoio.netlify.app/",
     [types.JS, types.HTML, types.CSS, types.RESPONSIVE],
-    "This is my first ever project which I made, and it took me a week from ",
+    "This is my first ever project which I made, and it took me a week to make ",
     0
   ),
   new Project(

@@ -42,8 +42,9 @@ const aboutMe: JSX.Element[] = [
     I embodied this principle by making an{" "}
     <span className={classes.quartenary}>oath</span> to myself to wake up at{" "}
     <span className={classes.tertiary}>5 AM</span> at every single weekday for
-    the rest of my life {String.fromCodePoint(0x1f31e)}. This gargantuan habit
-    transformed every single facet of my life, especially coding.
+    the rest of my life so I can seize the day {String.fromCodePoint(0x1f31e)}.
+    This gargantuan habit transformed every single facet of my life, especially
+    coding.
   </>,
   <>
     Before the semester ended, I created a plan for the summer to learn web

@@ -1,10 +1,10 @@
 import { StaticImageData } from "next/image";
-import coding from "../public/assets/images/hobby/coding.jpg";
-import cooking from "../public/assets/images/hobby/cooking.jpg";
-import finance from "../public/assets/images/hobby/finance.jpg";
-import nature from "../public/assets/images/hobby/nature.jpg";
-import publico from "../public/assets/images/hobby/public.jpg";
-import reading from "../public/assets/images/hobby/reading.jpg";
+import coding from "../../public/assets/images/hobby/coding.jpg";
+import cooking from "../../public/assets/images/hobby/cooking.jpg";
+import finance from "../../public/assets/images/hobby/finance.jpg";
+import nature from "../../public/assets/images/hobby/nature.jpg";
+import publico from "../../public/assets/images/hobby/public.jpg";
+import reading from "../../public/assets/images/hobby/reading.jpg";
 
 type Image = StaticImageData | null;
 

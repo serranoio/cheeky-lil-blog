@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import classes from "./Projects.module.css";
 import { sep } from "path";
 import { useInView } from "react-intersection-observer";
-import { Project, allProjects, typesNames } from "@/functions/project";
+import { Project, allProjects, typesNames } from "@/store/data/project";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ProjectTechLogos } from "./ProjectTechLogos";

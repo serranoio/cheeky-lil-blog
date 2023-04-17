@@ -35,36 +35,36 @@ const PictureGrid: FC<PictureGridInterface> = ({ routerLink, list }) => {
       );
     });
 
-    let target: HTMLElement = e.target.closest("figure"); // make sure we're on figure
+    //   let target: HTMLElement = e.target.closest("figure"); // make sure we're on figure
 
-    const top = target.getBoundingClientRect().top;
-    const bottom = target.getBoundingClientRect().bottom;
-    const mouseTop = e.clientY;
-    const left = target.getBoundingClientRect().left;
-    const right = target.getBoundingClientRect().right;
-    const mouseLeft = e.clientX;
+    //   const top = target.getBoundingClientRect().top;
+    //   const bottom = target.getBoundingClientRect().bottom;
+    //   const mouseTop = e.clientY;
+    //   const left = target.getBoundingClientRect().left;
+    //   const right = target.getBoundingClientRect().right;
+    //   const mouseLeft = e.clientX;
 
-    changeControlY((prevState: any) => {
-      const newnum = mapper(
-        mouseTop,
-        { start: Number(top), end: Number(bottom) },
-        { start: 55, end: 45 }
-      );
+    //   changeControlY((prevState: any) => {
+    //     const newnum = mapper(
+    //       mouseTop,
+    //       { start: Number(top), end: Number(bottom) },
+    //       { start: 55, end: 45 }
+    //     );
 
-      prevState[i] = newnum;
-      return [...prevState];
-    });
+    //     prevState[i] = newnum;
+    //     return [...prevState];
+    //   });
 
-    changeControlX((prevState: any) => {
-      const newnum = mapper(
-        mouseLeft,
-        { start: Number(left), end: Number(right) },
-        { start: 55, end: 45 }
-      );
+    //   changeControlX((prevState: any) => {
+    //     const newnum = mapper(
+    //       mouseLeft,
+    //       { start: Number(left), end: Number(right) },
+    //       { start: 55, end: 45 }
+    //     );
 
-      prevState[i] = newnum;
-      return [...prevState];
-    });
+    //     prevState[i] = newnum;
+    //     return [...prevState];
+    //   });
   };
 
   // resetColors: we reset all colors to on when we leave

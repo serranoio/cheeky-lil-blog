@@ -1,4 +1,4 @@
-import { types, typesNames } from "@/functions/project";
+import { types, typesNames } from "@/store/data/project";
 import classes from "./Projects.module.css";
 
 interface Props {

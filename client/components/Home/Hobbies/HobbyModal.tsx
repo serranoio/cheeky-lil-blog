@@ -1,5 +1,5 @@
 import SectionModal from "@/components/SectionModal/SectionModal";
-import { Hobby } from "@/functions/hobby";
+import { Hobby } from "@/store/data/hobby";
 import { FC, useState } from "react";
 import classes from "./HobbyModal.module.css";
 import Image, { StaticImageData } from "next/image";

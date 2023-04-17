@@ -49,11 +49,13 @@
 .create {
   padding: 1.2rem 2rem;
   background: none;
-  color: var(--h2);
+  color: var(--quartenary);
   font-size: 2.4rem;
-  border: 2px solid var(--h2);
+  border: 2px solid var(--quartenary);
   border-radius: var(--br);
   cursor: pointer;
+  transition: all 0.2s;
 }
 .create:hover {
+  transform: translateY(-2px);
 }

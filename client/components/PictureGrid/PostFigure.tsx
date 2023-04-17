@@ -72,7 +72,7 @@ const PostFigure: FC<PostFigureInterface> = ({
         }}
         style={{
           ...backgroundImage,
-          backgroundPosition: `${controlX}% ${controlY}%, ${controlX}% ${controlY}%`,
+          backgroundPosition: `50% 50%, center`,
           backgroundSize: `cover,  cover`,
           height: `${listLength <= 4 ? `100vh` : "50vh"}`,
         }}

@@ -23,42 +23,10 @@
   grid-column: span 3;
 }
 
-.postFigure[data-topic="morningroutine"] {
-  background-image: repeating-linear-gradient(
-      45deg,
-      #49494905 0,
-      #494949 2px,
-      transparent 0,
-      transparent 50%
-    ),
-    url("../../public/assets/images/morning-sun.jpg");
-}
-
-.postFigure[data-topic="coding"] {
-  background-image: repeating-linear-gradient(
-      45deg,
-      #49494905 0,
-      #494949 2px,
-      transparent 0,
-      transparent 50%
-    ),
-    url("../../public/assets/images/coding.jpg");
-}
-.postFigure[data-topic="nature"] {
-  background-image: repeating-linear-gradient(
-      45deg,
-      #49494905 0,
-      #494949 2px,
-      transparent 0,
-      transparent 50%
-    ),
-    url("../../public/assets/images/rose.jpg");
-}
-
 .postFigure:hover {
   color: var(--p);
-  background-position: 0% 0%, center, 50% 50%;
-  background-size: 12vmin 12vmin, 100% 100%, cover;
+  /* background-position: 0% 0%, center, 50% 50%; */
+  /* background-size: 12vmin 12vmin, 100% 100%, cover; */
   /* opacity: 0.5; */
 }
 .topicTitle {

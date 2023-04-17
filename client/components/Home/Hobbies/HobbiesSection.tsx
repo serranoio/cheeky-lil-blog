@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import classes from "./HobbiesSection.module.css";
-import { Hobby, allHobbies, getComingSoon } from "@/functions/hobby";
+import { Hobby, allHobbies, getComingSoon } from "@/store/data/hobby";
 import { useInView } from "react-intersection-observer";
 import SectionModal from "@/components/SectionModal/SectionModal";
 import ProjectModal from "../Projects/ProjectModal";

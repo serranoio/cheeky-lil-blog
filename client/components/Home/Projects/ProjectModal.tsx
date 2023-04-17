@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { motion } from "framer-motion";
 import classes from "./Projects.module.css";
-import { Project } from "@/functions/project";
+import { Project } from "@/store/data/project";
 import Image, { StaticImageData } from "next/image";
 import allbrite from "../../../public/assets/images/portfolio/AllbriteFamily.jpg";
 import morning from "../../../public/assets/images/morning-sun.jpg";

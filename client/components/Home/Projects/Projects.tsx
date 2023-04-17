@@ -67,6 +67,7 @@ const Projects = () => {
         ref={refGrid}
         animate={inViewGrid ? "open" : "closed"}
         variants={variants}
+        id={"projects"}
         onClick={(e: any) => {
           if (e.target.nodeName === "DIV") return;
           const projectNum: number = e.target.closest("figure").dataset.project;

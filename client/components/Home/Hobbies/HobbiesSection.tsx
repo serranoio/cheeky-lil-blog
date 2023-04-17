@@ -220,6 +220,7 @@ const HobbiesSection: FC = () => {
           const text = hasVideoEndedText ? hobby.hobbyName : "";
           return (
             <figure
+              id={"hobbys"}
               key={i}
               data-type={i}
               className={

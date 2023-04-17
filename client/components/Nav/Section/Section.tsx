@@ -41,11 +41,13 @@ const Section: FC<section> = ({ items, section, tab, openSection, i }) => {
     } else if (itemL === "posts") {
       return "/blog/topic/posts";
     } else if (itemL === "home" && tab.toLocaleLowerCase() === "me") {
-      return "/me";
-    } else if (itemL === "goals") {
-      return "/goals";
-    } else if (itemL === "cs") {
-      return "/cs";
+      return "/#hero";
+    } else if (itemL === "about") {
+      return "/#about";
+    } else if (itemL === "projects") {
+      return "/#projects";
+    } else if (itemL === "hobby") {
+      return "/#hobbys";
     }
 
     return "/";

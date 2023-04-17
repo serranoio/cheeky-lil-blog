@@ -111,7 +111,7 @@ export const allProjects = [
   new Project(
     "4/ 5/ 7/ 8",
     "Allbrite Family Dental",
-    "https://allbritefamily.netlify.app/",
+    "https://allbritefamilydental.com/",
     [types.JS, types.HTML, types.CSS, types.RESPONSIVE],
     "This is my second ever web development project. I made this for my mom's dentist :).",
     4
@@ -119,7 +119,7 @@ export const allProjects = [
   new Project(
     "7/ 1/ 11/ -4",
     "Team8s",
-    "https://allbritefamily.netlify.app/",
+    "https://github.com/exortme1ster/teameights",
     [types.REACT, types.JS, types.SC, types.RESPONSIVE],
     "Joining the team in February of 2023, I have contributed quite a bit as we are planning to launch this app over the summer. I have gained a ton of frontend experience with the use of React Query and React Formik. Also, this is my first time working with a designer, and it makes me a better frontend developer since I have to adhere to specific qualities.",
     5
@@ -127,7 +127,7 @@ export const allProjects = [
   new Project(
     "8/ 8/ 14/ 11",
     "Maps With Friends",
-    "https://allbritefamily.netlify.app/",
+    "http://3.144.121.210:3000/",
     [types.REACT, types.CSS, types.SUPABASE, types.TS],
     "In my software engineering class at UIC, CS 440, we had to make a project. We decided to make our version of GeoGuessr! We were put into teams of 4, and I contributed to make basically the entire UI apart from the game and how section. I made most of the backend with profiles and login.",
     6
@@ -135,9 +135,9 @@ export const allProjects = [
   new Project(
     "11/  1/ 14/ 8",
     "Intent",
-    "https://myintent.netlify.app/",
+    "https://github.com/dserra22/intent",
     [types.REACT, types.SUPABASE, types.TS, types.CSS],
-    "This is my first ever full stack app, built in React, TypeScript, and Supabase. I genuinely learned a lot from this. Despite the fact that the supabase backend is currently paused because I am using the free-tier, I am proud of how far it has made me come",
+    "This is my first ever full stack app, built in React, TypeScript, and Supabase. I genuinely learned a lot from this. Despite the fact that the supabase backend is currently paused because I am using the free-tier, I am proud of how far it has made me come. Supabase backend is paused, and I can restart it if you want.",
     7
   ),
 ];

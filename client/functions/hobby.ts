@@ -1,5 +1,10 @@
 import { StaticImageData } from "next/image";
-import coding from "../public/assets/images/coding.jpg";
+import coding from "../public/assets/images/hobby/coding.jpg";
+import cooking from "../public/assets/images/hobby/cooking.jpg";
+import finance from "../public/assets/images/hobby/finance.jpg";
+import nature from "../public/assets/images/hobby/nature.jpg";
+import publico from "../public/assets/images/hobby/public.jpg";
+import reading from "../public/assets/images/hobby/reading.jpg";
 
 type Image = StaticImageData | null;
 
@@ -42,7 +47,7 @@ export const allHobbies = [
     "I consider coding as a hobby because I did not have to make this new portfolio, yet I still did. I genuinely enjoy the process of constantly learning and solving new tasks. That's what separates this occupation from the rest - it will never be repetitive. You might reuse your redux toolkit you used from the last project, but it will never be the same code.",
     0,
     "I want to master full-stack web development. I want to be on the forefront of the newest web-dev technology.",
-    "This will lead my life towards respect in the web development industry and with my peers.I cannot wait.",
+    "This will lead my life towards respect in the web development industry and with my peers. I cannot wait.",
     coding
   ),
   new Hobby(
@@ -51,7 +56,7 @@ export const allHobbies = [
     1,
     "I try to read every night before bed. When the weather is nice outside, it is irresistable to   ",
     "Knowledge is power",
-    coding
+    reading
   ),
   new Hobby(
     "Financial Freedom",
@@ -59,7 +64,7 @@ export const allHobbies = [
     2,
     "By When I'm 30, I seek to be financially free. I have multiple avenues of financial freedome with multiple investing buckets planned out, I just need time to execute.",
     "The impact on my life is that it would allow me to grace the planet with even more value. I seek to be a venture philanthropist.",
-    coding
+    finance
   ),
   new Hobby(
     "Nature",
@@ -67,24 +72,31 @@ export const allHobbies = [
     3,
     "More nature walks. I want to live closer to the hemisphere so that I can get the optimal amount of sun all year around.",
     "impact",
-    coding
+    nature
   ),
   new Hobby(
     "Fitness",
     "I do a 10 minute HIIT workout everyday, weightlift 5-6 times a week. I want to start doing yoga. I want to get an ice bath so I can be more temperature resistant.",
     4,
-    "goals",
+    "My goal is to be able to rep 225 lb on the bench, to put on 2 45 plates on pull-ups, and to be able to squat 275 by the end of this year. I want to be 65 and jacked.",
     "High producing individuals are individuals with high energy. Maximally effective people are in shape.",
-    coding
+    finance
   ),
-  new Hobby("Cooking", ">:)", 5, "goals", "impact", coding),
+  new Hobby(
+    "Cooking",
+    "I created a cooking methodology in which I have went from not knowing how to cook a chicken breast, to cooking chicken mole, miso soup, sushi, patacones, and much more. ",
+    5,
+    "I cook by cuisine and switch cuisines every 1-3 months. I did Mexican->Italian->Chinese->Japanese->Carribean and my goal is to explore the world's cuisines. My goal is to try food i've never had before. ",
+    "The food that you feed yourself is your fuel to become maximally effective. There is no reason why you shouldn't be treating yourself with life's gifts on the daily. In fact, treating yourself is not going out to eat, treating yourself is cooking food to bless your taste buds with a flavor you have never had before.",
+    cooking
+  ),
   new Hobby(
     "Public Speaking",
     "In order to be influencial, I must be good at public speaking. I love challenging myself to captivate the audience in every story I tell.",
     6,
     "I am in this club called Toastmasters. My goal is to win Toastmasters International for the international speech contest.",
     "I want to be influencial.",
-    coding
+    publico
   ),
   new Hobby(
     "Self-Improvement",
@@ -97,7 +109,7 @@ export const allHobbies = [
 ];
 
 export const getComingSoon = (type: number): boolean => {
-  if (type === 2 || type === 5) return true;
+  if (type === 2) return true;
 
   return false;
 };

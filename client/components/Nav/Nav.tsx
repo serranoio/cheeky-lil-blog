@@ -7,7 +7,7 @@ import CreatePost from "../CreatePost/CreatePost";
 
 const blogContent: string[] = ["Home", "Topics", "Posts"];
 
-const Me: string[] = ["Home", "Goals", "CS"];
+const Me: string[] = ["Home", "About", "Projects", "Hobby"];
 
 const map = new Map();
 
@@ -71,7 +71,7 @@ const Nav: FC = () => {
                 section={section[i]}
                 i={i}
                 openSection={openSection}
-              ></Section>
+              />
             </li>
           );
         })}

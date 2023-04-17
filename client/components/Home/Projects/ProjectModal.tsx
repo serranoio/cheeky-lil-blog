@@ -10,6 +10,7 @@ import betsygiron from "../../../public/assets/images/portfolio/betsygiron.jpg";
 import portfolio from "../../../public/assets/images/portfolio/Davidportfolio.jpg";
 import mapsWithFriends from "../../../public/assets/images/portfolio/mapswithfriends.jpg";
 import techChad from "../../../public/assets/images/portfolio/techchad.jpg";
+import team8s from "../../../public/assets/images/portfolio/team8s.jpg";
 import SectionModal from "@/components/SectionModal/SectionModal";
 
 interface Props {
@@ -39,7 +40,7 @@ const ProjectModal: FC<Props> = ({
     } else if (chosenProject.type === 4) {
       return allbrite;
     } else if (chosenProject.type === 5) {
-      return morning; // NOT DONE
+      return team8s;
     } else if (chosenProject.type === 6) {
       return mapsWithFriends;
     } else if (chosenProject.type === 7) {

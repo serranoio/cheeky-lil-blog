@@ -14,7 +14,7 @@ const aboutMe: JSX.Element[] = [
         href="https://www.amazon.com/Habits-Highly-Effective-People/dp/1471131823/ref=sr_1_6?keywords=the+7+habits+of+highly+effective&qid=1681654315&sprefix=The+7+habi%2Caps%2C94&sr=8-6"
         target="_blank"
       >
-        7 Habits of Highly Effective People{" "}
+        7 Habits of Highly Effective People.{" "}
       </a>
     </i>
     Slowly but surely, it <span className={classes.tertiary}>opened</span> up my
@@ -54,7 +54,7 @@ const aboutMe: JSX.Element[] = [
   </>,
   <>
     By the end of summer, I learned TypeScript, HTML, CSS, React and made some
-    pretty fire projects {String.fromCodePoint(0x1f525)} by waking up at{" "}
+    pretty {String.fromCodePoint(0x1f525)} projects by waking up at{" "}
     <span className={classes.tertiary}>5 AM </span>
     every weekday, going to the gym, then coding from 9-5.
   </>,
@@ -132,7 +132,7 @@ const About = () => {
   // console.log(scroller > 0 + start - margin && scroller < 0 + start + margin);
 
   return (
-    <section className={classes.section}>
+    <section className={classes.section} id="about">
       <div className={classes.about}>
         <h2
           className={`${classes.title} ${inView ? classes.inView : ""}`}

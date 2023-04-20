@@ -31,7 +31,7 @@ const aboutMe: JSX.Element[] = [
     .
   </>,
   <>
-    All of the literature pointed to fact that every{" "}
+    All of the literature pointed to the fact that every{" "}
     <i className={classes.italics}>single</i>
     <span className={classes.quartenary}> granular </span> detail in your life
     matters because it has the power to{" "}

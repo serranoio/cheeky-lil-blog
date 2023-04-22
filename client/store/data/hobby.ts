@@ -71,7 +71,7 @@ export const allHobbies = [
     "They say that all of life answers are hidden within nature, and that is true. Nature has convergently evolved the dependent variable for optimizing mathematical formulas for a reason. The golden ratio, e, and pi, all are inherent to the laws of the universe. If there exists mathematically principles that govern the way that plants should grow, then there must be a right way to live... ",
     3,
     "More nature walks. I want to live closer to the hemisphere so that I can get the optimal amount of sun all year around.",
-    "impact",
+    "Being connected to nature is healthy for your soul. What makes us human is our natural desire to find meaning within the meaningeless universe, and nature has all meaning. We would not be alive if plants did not exist. We need to appreciate our home <3.",
     nature
   ),
   new Hobby(

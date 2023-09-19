@@ -12,19 +12,23 @@ const aboutMe: JSX.Element[] = [
 
   <>
   I interweave logic and abstraction within every line that I write, 
-  forming metaphors to make logic simple :) and light.
+  forming metaphors to make logic simple :) and light. {String.fromCodePoint(0x1F601)}
   </>,
 
   <>
-  These metaphors are coupled together to create functions, or in other words, stanzas.
+  These metaphors are coupled together to create functions, or in other words, stanzas. 
+  {String.fromCodePoint(0x1F9D0)}
   </>,
 
   <>
-  Amongst all the chaos in the world, these files are organized together to form files; a poem is manifested. 
+  Amongst all the chaos {String.fromCodePoint(0x2622)} in the world, 
+  these files happen to organize together to form files and a poem is manifested.
+   {String.fromCodePoint(0x1F4AD)}
   </>,
 
-  <>
+<>
   Put multiple files together to create a project, and you get a story.
+{String.fromCodePoint(0x1F4D5)}
   </>,
 
   <>
@@ -35,9 +39,9 @@ const aboutMe: JSX.Element[] = [
   Chapter 1: The Beginnings
   </>,
   <>
-  There was a time in my life where I felt like I was nothing. I didn't believe I was smart enough,
+  There was a time in my life where I felt like I was <span className={classes.tertiary}>nothing</span>. I didn't believe I was smart enough,
   I used to get embarrassed over not understanding simple algorithms. I was objectively the worst 3 CS students in my
-  highschool.
+  highschool. {String.fromCodePoint(0x1F44E)}
   </>,
 
   <>Chapter 2: The Resurgance.</>,
@@ -54,6 +58,7 @@ const aboutMe: JSX.Element[] = [
   But I got an internship offer for Backend/Fullstack at this company called Splunk. I emailed my manager, "tech stack question mark?"
   and extended my journey to learning database options like Supabase and Pocketbase and also learned Golang and Nextjs.
   <br/>
+  <i>I was kind of afraid since I had no experience in the backend...</i>
   </>,
 
   <>Chapter 4: The Internship.</>,
@@ -72,7 +77,7 @@ const aboutMe: JSX.Element[] = [
   <ul>
     <li>Pinnacle: The next step in framework evolution. <a target="_blank" href="https://github.com/serranoio/pinnacle">See repo here</a> </li>
     <li>Accential: Rust+leptos into a WASM frontend. Distributed microservices architecture with RabbitMQ and Golang.
-      One microservice hydrates an HTML document using LitElement + Bun + TypeScript.  <a target="_blank" href="https://github.com/serranoio/frontend">Frontend here -></a></li>
+      One microservice hydrates an HTML document using LitElement + Bun + TypeScript.  <a target="_blank" href="https://github.com/serranoio/frontend">Frontend here -&gt;</a></li>
     <li>Open Source: Looking to contribute to open source in some way. I have so many ideas and I will pounce on one when the opportunity
       presents itself.
     </li>

@@ -13,24 +13,7 @@ const Background: FC<IBackground> = (props) => {
   // the logic here is that backgroundMover will range from -200 to 200.
   // changeDirection will change from 1, -1. It will be the incrementer
   // isChanged will determine if we need to change
-  const [backgroundMover, setBackgroundMover] = useState(boundaries);
-  const [changeDirection, setChangeDirection] = useState(-1);
-  const [isChanged, setChange] = useState(false);
 
-  const [backgroundWheel, setBackgroundWheel] = useState(0);
-
-  useEffect(() => {
-    const onWheel = (e: any) => {
-      setBackgroundWheel(
-        (prevState: number) => prevState + Number(e.deltaY) * 0.01
-      );
-    };
-
-    document.removeEventListener("wheel", onWheel);
-    document.addEventListener("wheel", onWheel);
-
-    return () => document.removeEventListener("wheel", onWheel);
-  }, []);
 
   // useEffect(() => {
   //   // we create an interval function that adds changeDirection to backgroundMover
@@ -76,7 +59,7 @@ const Background: FC<IBackground> = (props) => {
         // }px`,
         // backgroundImage: `linear-gradient(135deg, #0000 18.75%,  #000000 0 31.25%, #0000 0),
         // repeating-linear-gradient(45deg, #000 -6.25% 6.25%, #0F1012 0 18.75%)`,
-        backgroundPosition: `${backgroundWheel * 0.25}% ${50}%`,
+        backgroundPosition: `${50}% ${50}%`,
       }}
     >
       {props.children}

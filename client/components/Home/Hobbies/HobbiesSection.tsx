@@ -26,9 +26,9 @@ const HobbiesSection: FC = () => {
   const { ref: refGrid, inView: inViewGrid } = useInView({
     threshold: 0.75,
   });
-  const [hasVideoEnded, changeVideoEnd] = useState(false);
-  const [hasVideoEndedText, changeVideoEndText] = useState(false);
-  const [opacity, changeOpacity] = useState(false);
+  const [hasVideoEnded, changeVideoEnd] = useState(true);
+  const [hasVideoEndedText, changeVideoEndText] = useState(true);
+  const [opacity, changeOpacity] = useState(true);
   const [isHobbyOpened, openHobby] = useState<boolean>(false);
   const [chosenHobby, changeChosenHobby] = useState<Hobby | null>(null);
   const [cardPosition, changeCardPosition] = useState(
@@ -36,54 +36,54 @@ const HobbiesSection: FC = () => {
   );
   const [hoveredHobby, setHoveredHobby] = useState<number>(-1);
 
-  useEffect(() => {
-    if (!hasVideoEnded) return;
+  // useEffect(() => {
+  //   if (!hasVideoEnded) return;
 
-    const timeout = () => {
-      changeVideoEndText(true);
-    };
+  //   const timeout = () => {
+  //     changeVideoEndText(true);
+  //   };
 
-    const timer = setTimeout(timeout, 1500);
+  //   const timer = setTimeout(timeout, 1500);
 
-    return () => clearTimeout(timer);
-  }, [hasVideoEnded]);
+  //   return () => clearTimeout(timer);
+  // }, [hasVideoEnded]);
 
-  useEffect(() => {
-    if (!hasVideoEndedText) return;
+  // useEffect(() => {
+  //   if (!hasVideoEndedText) return;
 
-    const timeout = () => {
-      changeOpacity(true);
-    };
+  //   const timeout = () => {
+  //     changeOpacity(true);
+  //   };
 
-    const timer = setTimeout(timeout, 250);
+  //   const timer = setTimeout(timeout, 250);
 
-    return () => clearTimeout(timer);
-  }, [hasVideoEndedText]);
+  //   return () => clearTimeout(timer);
+  // }, [hasVideoEndedText]);
 
-  const video = (
-    <>
-      <video
-        className={
-          classes.introduceVideo + ` ${hasVideoEnded ? classes.hide : ""}`
-        }
-        onEnded={() => {
-          changeVideoEnd(true);
-        }}
-        controls
-      >
-        <source src="/assets/videos/david.MOV" />
-      </video>
-      <button
-        className={classes.skip + ` ${hasVideoEnded ? classes.hide : ""}`}
-        onClick={() => {
-          changeVideoEnd(true);
-        }}
-      >
-        {" "}
-        <i>skip</i>
-      </button>
-    </>
-  );
+  // const video = (
+  //   <>
+  //     <video
+  //       className={
+  //         classes.introduceVideo + ` ${hasVideoEnded ? classes.hide : ""}`
+  //       }
+  //       onEnded={() => {
+  //         changeVideoEnd(true);
+  //       }}
+  //       controls
+  //     >
+  //       <source src="/assets/videos/david.MOV" />
+  //     </video>
+  //     <button
+  //       className={classes.skip + ` ${hasVideoEnded ? classes.hide : ""}`}
+  //       onClick={() => {
+  //         changeVideoEnd(true);
+  //       }}
+  //     >
+  //       {" "}
+  //       <i>skip</i>
+  //     </button>
+  //   </>
+  // );
 
   const getSVG = (): JSX.Element => {
     if (hoveredHobby === 0) {
@@ -214,7 +214,7 @@ const HobbiesSection: FC = () => {
           data-type="8"
         >
           {photos}
-          {video}
+          {/* {video} */}
         </figure>
         {allHobbies.map((hobby: Hobby, i: number) => {
           const text = hasVideoEndedText ? hobby.hobbyName : "";

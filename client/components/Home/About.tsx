@@ -12,7 +12,7 @@ const aboutMe: JSX.Element[] = [
 
   <>
   I interweave logic and abstraction within every line that I write, 
-  forming metaphors to make logic simple :) and light. {String.fromCodePoint(0x1F601)}
+  forming metaphors to make logic simple and light. {String.fromCodePoint(0x1F601)}
   </>,
 
   <>
@@ -22,7 +22,7 @@ const aboutMe: JSX.Element[] = [
 
   <>
   Amongst all the chaos {String.fromCodePoint(0x2622)} in the world, 
-  these stanzas happen to organize together to form files and a poem is manifested.
+  these stanzas happen to organize together to form a file; a poem is manifested.
    {String.fromCodePoint(0x1F4AD)}
   </>,
 

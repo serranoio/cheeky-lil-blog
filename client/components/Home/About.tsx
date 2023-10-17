@@ -10,85 +10,85 @@ const aboutMe: JSX.Element[] = [
   I write <p className={classes.quartenary}>poetry</p>.
   </>,
 
-//   <>
-//   I interweave logic and abstraction within every line that I write, 
-//   forming metaphors to make logic simple :) and light. {String.fromCodePoint(0x1F601)}
-//   </>,
+  <>
+  I interweave logic and abstraction within every line that I write, 
+  forming metaphors to make logic simple :) and light. {String.fromCodePoint(0x1F601)}
+  </>,
 
-//   <>
-//   These metaphors are coupled together to create functions, or in other words, stanzas. 
-//   {String.fromCodePoint(0x1F9D0)}
-//   </>,
+  <>
+  These metaphors are coupled together to create functions, or in other words, stanzas. 
+  {String.fromCodePoint(0x1F9D0)}
+  </>,
 
-//   <>
-//   Amongst all the chaos {String.fromCodePoint(0x2622)} in the world, 
-//   these stanzas happen to organize together to form files and a poem is manifested.
-//    {String.fromCodePoint(0x1F4AD)}
-//   </>,
+  <>
+  Amongst all the chaos {String.fromCodePoint(0x2622)} in the world, 
+  these stanzas happen to organize together to form files and a poem is manifested.
+   {String.fromCodePoint(0x1F4AD)}
+  </>,
 
-// <>
-//   Put multiple files together to create a project, and you get a story.
-// {String.fromCodePoint(0x1F4D5)}
-//   </>,
+<>
+  Put multiple files together to create a project, and you get a story.
+{String.fromCodePoint(0x1F4D5)}
+  </>,
 
-//   <>
-//   This is my story.
-//   </>,
+  <>
+  This is my story.
+  </>,
   
-//   <>
-//   Chapter 1: The Beginnings
-//   </>,
-//   <>
-//   There was a time in my life where I felt like I was <span className={classes.tertiary}>nothing</span>. I didn't believe I was smart enough,
-//   I used to get embarrassed over not understanding simple algorithms. I was objectively the worst 3 CS students in my
-//   highschool. {String.fromCodePoint(0x1F44E)}
-//   </>,
+  <>
+  Chapter 1: The Beginnings
+  </>,
+  <>
+  There was a time in my life where I felt like I was <span className={classes.tertiary}>nothing</span>. I didn't believe I was smart enough,
+  I used to get embarrassed over not understanding simple algorithms. I was objectively the worst 3 CS students in my
+  highschool. {String.fromCodePoint(0x1F44E)}
+  </>,
 
-//   <>Chapter 2: The Resurgance.</>,
-//   <>
-//   But then I realized that human potential is absolutely limitless, and I embodied it.
-//   I started waking up at 5 AM, going to the gym, cooking, reading, meditating, practicing self-love through nature,
-//    and affirmations. Mostly importantly, I spent my entire 2021 Summer learning JavaScript, HTML, CSS, React from the
-//    ground up. Every project that presented itself to me became an opportunity for my skills to reach another echelon.
-//   </>,
+  <>Chapter 2: The Resurgance.</>,
+  <>
+  But then I realized that human potential is absolutely limitless, and I embodied it.
+  I started waking up at 5 AM, going to the gym, cooking, reading, meditating, practicing self-love through nature,
+   and affirmations. Mostly importantly, I spent my entire 2021 Summer learning JavaScript, HTML, CSS, React from the
+   ground up. Every project that presented itself to me became an opportunity for my skills to reach another echelon.
+  </>,
 
-//   <>Chapter 3: The Full Stack.</>,
-//   <>
-//   I was applying for jobs with intentions to be a frontend developer since that is where I had honed in my skills...
-//   But I got an internship offer for Backend/Fullstack at this company called Splunk. I emailed my manager, "tech stack question mark?"
-//   and extended my journey to learning database options like Supabase and Pocketbase and also learned Golang and Nextjs.
-//   <br/>
-//   <i>I was kind of afraid since I had no experience in the backend...</i>
-//   </>,
+  <>Chapter 3: The Full Stack.</>,
+  <>
+  I was applying for jobs with intentions to be a frontend developer since that is where I had honed in my skills...
+  But I got an internship offer for Backend/Fullstack at this company called Splunk. I emailed my manager, "tech stack question mark?"
+  and extended my journey to learning database options like Supabase and Pocketbase and also learned Golang and Nextjs.
+  <br/>
+  <i>I was kind of afraid since I had no experience in the backend...</i>
+  </>,
 
-//   <>Chapter 4: The Internship.</>,
-//   <>
-//   I was enlightened. I had witnessed mastery with my own eyes. I saw gravity enacting on chaos to bring about order,
-//   where every piece synergized together to create beauty. It made me realize that coding is an ARTFORM. Code is art. Code 
-//   is poetry. Code is dance, code is music.
-//   </>,
+  <>Chapter 4: The Internship.</>,
+  <>
+  I was enlightened. I had witnessed mastery with my own eyes. I saw gravity enacting on chaos to bring about order,
+  where every piece synergized together to create beauty. It made me realize that coding is an ARTFORM. Code is art. Code 
+  is poetry. Code is dance, code is music.
+  </>,
 
-//   <>
-//   Chapter 5: Greatness
-//   </>,
+  <>
+  Chapter 5: Greatness
+  </>,
 
-  // <>
-  //   Firstly, No other word best suits the name of this chapter. I have dreams to contribute to open source and 
-  //   to continue my learning towards mastery. Here are my plans for the next 1 year:
-  //   <ul>
-  //     <li>Pinnacle: The next step in framework evolution. <a target="_blank" href="https://github.com/serranoio/pinnacle">See repo here</a> </li>
+  <>
+    Firstly, No other word best suits the name of this chapter. I have dreams to contribute to open source and 
+    to continue my learning towards mastery. Here are my plans for the next 1 year:
+    <ul>
+      <li>Pinnacle: The next step in framework evolution. <a target="_blank" href="https://github.com/serranoio/pinnacle">See repo here</a> </li>
       
-  //     <li>Accential: Rust+leptos into a WASM frontend. Distributed microservices architecture with RabbitMQ and Golang.
-  //       One microservice hydrates an HTML document using LitElement + Bun + TypeScript.  
-  //       <a target="_blank" href="https://github.com/serranoio/frontend">Frontend here -&gt;
-  //       </a>
-  //     </li>
+      <li>Accential: Rust+leptos into a WASM frontend. Distributed microservices architecture with RabbitMQ and Golang.
+        One microservice hydrates an HTML document using LitElement + Bun + TypeScript.  
+        <a target="_blank" href="https://github.com/serranoio/frontend">Frontend here -&gt;
+        </a>
+      </li>
 
-  //     <li>Open Source: Looking to contribute to open source in some way. I have so many ideas and I will pounce on one when the opportunity
-  //       presents itself.
-  //     </li>
-  //   </ul>
-  // </>
+      <li>Open Source: Looking to contribute to open source in some way. I have so many ideas and I will pounce on one when the opportunity
+        presents itself.
+      </li>
+    </ul>
+  </>
 
 
 ]

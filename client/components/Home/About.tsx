@@ -7,7 +7,7 @@ import AboutShow from "../AboutShow/AboutShow";
 
 const aboutMe: JSX.Element[] = [
   <>
-  I write <p className={classes.quartenary}>poetry</p>.
+  <p>I write <span className={classes.quartenary}>poetry</span>.</p>
   </>,
 
   <>

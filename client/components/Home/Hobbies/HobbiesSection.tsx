@@ -26,13 +26,16 @@ import {
 } from "@phosphor-icons/react";
 
 const rotationRange: number = 18;
+
 // were going to have a video play, and once the video is done,it will shrink to the middle and be replaced by photos of me pointing.
 const HobbiesSection: FC = () => {
-  const { ref: refTitle, inView: inViewTitle } = useInView({
-    threshold: 0.75,
+  const [thresholdNumber, updateThresholdNumber] = useState(.75);
+
+  let { ref: refTitle, inView: inViewTitle } = useInView({
+    threshold: thresholdNumber,
   });
-  const { ref: refGrid, inView: inViewGrid } = useInView({
-    threshold: 0.75,
+  let { ref: refGrid, inView: inViewGrid } = useInView({
+    threshold: thresholdNumber,
   });
   const [hasVideoEnded, changeVideoEnd] = useState(true);
   const [hasVideoEndedText, changeVideoEndText] = useState(true);
@@ -43,6 +46,26 @@ const HobbiesSection: FC = () => {
     allHobbies.map(() => ({ x: 0, y: 0, mouseX: 50, mouseY: 50 }))
   );
   const [hoveredHobby, setHoveredHobby] = useState<number>(-1);
+
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("only screen and (max-width: 704px)");
+    const handleMediaChange = (e: any) => {
+      if (e.matches) {
+      updateThresholdNumber(.25)
+    } else {
+      updateThresholdNumber(.75)
+    }
+
+    if (mediaQuery.matches) {
+      updateThresholdNumber(.25)   
+    }
+  }
+
+    mediaQuery.addEventListener("change", handleMediaChange);
+    // Cleanup function to remove the listener when the component unmounts
+    return () => mediaQuery.addEventListener("change", handleMediaChange);
+  }, []);
 
   // useEffect(() => {
   //   if (!hasVideoEnded) return;

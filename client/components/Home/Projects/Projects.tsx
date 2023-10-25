@@ -17,19 +17,41 @@ import { ProjectTechLogos } from "./ProjectTechLogos";
 import ProjectModal from "./ProjectModal";
 
 const Projects = () => {
+  const [thresholdNumber, updateThresholdNumber] = useState(.5);
+  
   const { ref: refTitle, inView: inViewTitle } = useInView({
-    threshold: 0.75,
+    threshold: thresholdNumber,
   });
   const { ref: refDesc, inView: inViewDesc } = useInView({
-    threshold: 0.75,
+    threshold: thresholdNumber,
   });
   const { ref: refGrid, inView: inViewGrid } = useInView({
-    threshold: 0.5,
+    threshold: thresholdNumber,
   });
 
   const [onHover, changeOnHover] = useState(typesNames.map(() => 0));
   const [isProjectOpened, openProject] = useState<boolean>(false);
   const [chosenProject, changeChosenProject] = useState<Project | null>(null);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("only screen and (max-width: 704px)");
+    const handleMediaChange = (e: any) => {
+      if (e.matches) {
+        updateThresholdNumber(.15)
+      } else {
+        updateThresholdNumber(.5)
+      }
+    }
+    
+    if (mediaQuery.matches) {
+      updateThresholdNumber(.15)
+      
+  }
+
+    mediaQuery.addEventListener("change", handleMediaChange);
+    // Cleanup function to remove the listener when the component unmounts
+    return () => mediaQuery.addEventListener("change", handleMediaChange);
+  }, []);
 
   const variants = {
     open: {

@@ -82,20 +82,7 @@ const aboutMe: JSX.Element[] = [
 
   <>
     Firstly, No other word best suits the name of this chapter. I have dreams to contribute to open source and 
-    to continue my learning towards mastery. Here are my plans for the next 1 year:
-    <ul>
-      <li>Pinnacle: The next step in framework evolution. <a target="_blank" href="https://github.com/serranoio/pinnacle">See repo here</a> </li>
-      
-      <li>Accential: Rust+leptos into a WASM frontend. Distributed microservices architecture with RabbitMQ and Golang.
-        One microservice hydrates an HTML document using LitElement + Bun + TypeScript.  
-        <a target="_blank" href="https://github.com/serranoio/frontend">Frontend here -&gt;
-        </a>
-      </li>
-
-      <li>Open Source: Looking to contribute to open source in some way. I have so many ideas and I will pounce on one when the opportunity
-        presents itself.
-      </li>
-    </ul>
+    to continue my learning towards mastery. The possibilities are endless.
   </>
 
 

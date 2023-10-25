@@ -19,23 +19,24 @@ const aboutMe: JSX.Element[] = [
   </>,
 
   <>
-  I interweave logic and abstraction within every line that I write,KeyModifie
+  I interweave logic and abstraction within every <span className={classes.quartenary}>line</span> that I write,
   forming metaphors to make logic simple and light. {String.fromCodePoint(0x1F601)}
   </>,
 
   <>
-  These metaphors are coupled together to create functions, or in other words, stanzas. 
+  These metaphors are coupled together to create functions, or in other words, <span className={classes.quartenary}>stanzas</span>. 
   {String.fromCodePoint(0x1F9D0)}
   </>,
 
   <>
   Amongst all the chaos {String.fromCodePoint(0x2622)} in the world, 
-  these stanzas happen to organize together to form a file; a poem is manifested.
+  these <span className={classes.quartenary}>stanzas</span> happen
+   to organize together to form a file and a <span className={classes.quartenary}>poem</span> is manifested.
    {String.fromCodePoint(0x1F4AD)}
   </>,
 
 <>
-  Put multiple files together to create a project, and you get a story.
+  Put multiple files together to create a project, and you get a <span className={classes.quartenary}>story</span>.
 {String.fromCodePoint(0x1F4D5)}
   </>,
 
@@ -54,7 +55,7 @@ const aboutMe: JSX.Element[] = [
 
   <>Chapter 2: The Resurgance.</>,
   <>
-  But then I realized that human potential is absolutely limitless, and I embodied it.
+  But then I realized that human potential is absolutely <span className={classes.tertiary}>limitless</span>, and I embodied it.
   I started waking up at 5 AM, going to the gym, cooking, reading, meditating, practicing self-love through nature,
    and affirmations. Mostly importantly, I spent my entire 2021 Summer learning JavaScript, HTML, CSS, React from the
    ground up. Every project that presented itself to me became an opportunity for my skills to reach another echelon.
@@ -62,7 +63,7 @@ const aboutMe: JSX.Element[] = [
 
   <>Chapter 3: The Full Stack.</>,
   <>
-  I was applying for jobs with intentions to be a frontend developer since that is where I had honed in my skills...
+  I was applying for jobs with intentions to be a frontend developer since that is where I had homed in my skills...
   But I got an internship offer for Backend/Fullstack at this company called Splunk. I emailed my manager, "tech stack question mark?"
   and extended my journey to learning database options like Supabase and Pocketbase and also learned Golang and Nextjs.
   <br/>
@@ -71,12 +72,12 @@ const aboutMe: JSX.Element[] = [
 
   <>Chapter 4: The Internship.</>,
   <>
-  I was enlightened. I had witnessed mastery with my own eyes. I saw gravity enacting on chaos to bring about order,
+  I was <span className={classes.tertiary}>enlightened</span>. I had witnessed mastery with my own eyes. I saw gravity enacting on chaos to bring about order,
   where every piece synergized together to create beauty. It made me realize that coding is an ARTFORM. Code is art. Code 
   is poetry. Code is dance, code is music.
   <br/>
   <i>I learned Lit Element, implemented web workers, made my frontend stateful using IndexedDB, created
-    an API with Golang, dockerized the app and threw it onto Kubernetes. More importantly, I learned the philosophies
+    an API with Golang, dockerized an app and threw it onto Kubernetes. More importantly, I learned the philosophies
     of interfaces and the ethereality of mastery. 
   </i>
   </>,
@@ -87,8 +88,9 @@ const aboutMe: JSX.Element[] = [
 
   <>
     Firstly, No other word best suits the name of this chapter. I have dreams to contribute to open source and 
-    to continue my learning towards mastery. The possibilities are endless. Follow me on github for
-    what I'm up to now! <a href="https://github.com/serranoio">Link here -></a>
+    to continue my learning towards mastery. The possibilities are <span className={classes.tertiary}>endless</span>.
+     Follow me on github for
+    what I'm up to now! <a href="https://github.com/serranoio">Link here -&gt;</a>
   </>
 
 

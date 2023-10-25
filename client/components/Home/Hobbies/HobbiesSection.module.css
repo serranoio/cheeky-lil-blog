@@ -158,4 +158,9 @@
     grid-row: span 1;
     grid-column: 1;
   }
+
+  .hobby,
+  .hobbyFiller {
+    pointer-events: none;
+  }
 }

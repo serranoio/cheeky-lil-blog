@@ -2,10 +2,6 @@
 // If you're reading this, welcome to my portfolio code
 // Hope you enjoy it!
 // Free AF. Take it all
-// David Serrano, October 24th, 2023
-// If you're reading this, welcome to my portfolio code
-// Hope you enjoy it!
-// Free AF. Take it all
 import { FC, useEffect, useState } from "react";
 import classes from "./HobbiesSection.module.css";
 import { Hobby, allHobbies, getComingSoon } from "@/store/data/hobby";

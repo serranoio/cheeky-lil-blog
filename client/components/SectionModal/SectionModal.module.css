@@ -52,5 +52,6 @@
     max-width: 60vw !important;
     height: 75vh !important;
     border-radius: var(--br);
+    overflow: hidden;
   }
 }

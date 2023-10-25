@@ -81,3 +81,9 @@
 .chosenTab::after {
   transform: scaleY(1);
 }
+
+
+@media (max-width: 44em) {
+
+  
+}

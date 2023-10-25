@@ -14,3 +14,9 @@
   /* display: block; */
   opacity: 1;
 }
+
+@media (max-width: 44em) {
+  .desc {
+    text-align: center;
+  }
+}

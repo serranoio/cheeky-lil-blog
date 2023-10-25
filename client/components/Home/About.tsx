@@ -74,6 +74,11 @@ const aboutMe: JSX.Element[] = [
   I was enlightened. I had witnessed mastery with my own eyes. I saw gravity enacting on chaos to bring about order,
   where every piece synergized together to create beauty. It made me realize that coding is an ARTFORM. Code is art. Code 
   is poetry. Code is dance, code is music.
+  <br/>
+  <i>I learned Lit Element, implemented web workers, made my frontend stateful using IndexedDB, created
+    an API with Golang, dockerized the app and threw it onto Kubernetes. More importantly, I learned the philosophies
+    of interfaces and the ethereality of mastery. 
+  </i>
   </>,
 
   <>
@@ -82,7 +87,8 @@ const aboutMe: JSX.Element[] = [
 
   <>
     Firstly, No other word best suits the name of this chapter. I have dreams to contribute to open source and 
-    to continue my learning towards mastery. The possibilities are endless.
+    to continue my learning towards mastery. The possibilities are endless. Follow me on github for
+    what I'm up to now! <a href="https://github.com/serranoio">Link here -></a>
   </>
 
 

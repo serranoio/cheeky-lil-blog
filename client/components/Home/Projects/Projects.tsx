@@ -37,14 +37,14 @@ const Projects = () => {
     const mediaQuery = window.matchMedia("only screen and (max-width: 704px)");
     const handleMediaChange = (e: any) => {
       if (e.matches) {
-        updateThresholdNumber(.15)
+        updateThresholdNumber(0)
       } else {
         updateThresholdNumber(.5)
       }
     }
     
     if (mediaQuery.matches) {
-      updateThresholdNumber(.15)
+      updateThresholdNumber(0)
       
   }
 

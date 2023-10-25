@@ -32,7 +32,7 @@ Admin login:
 username: user@gmail.com
 password: password123
 
-There are still a lot of frontend details that need to be implemented.
 
-Also, how do I even deploy this?!!? I'm genuinely interested.
-
+### HELLO!
+# please fix responsiveness - make buttons all of the way clickable
+# 

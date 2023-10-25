@@ -174,4 +174,8 @@
     width: 100vw;
     height: 50vh;
   }
+
+  .center {
+    padding: 3.2rem;
+  }
 }

@@ -74,7 +74,7 @@ const ProjectModal: FC<Props> = ({
         <a
           href={chosenProject?.link}
           target="_blank"
-          className={classes.chosenProjectLink}
+          className={classes.chosenProjectLink + ` ${chosenProject?.link === "" ? classes.deprecated : ""}`}
         >
           <Image
             width={300}

@@ -52,13 +52,13 @@ const HobbiesSection: FC = () => {
     const mediaQuery = window.matchMedia("only screen and (max-width: 704px)");
     const handleMediaChange = (e: any) => {
       if (e.matches) {
-      updateThresholdNumber(.25)
+      updateThresholdNumber(0)
     } else {
       updateThresholdNumber(.75)
     }
 
     if (mediaQuery.matches) {
-      updateThresholdNumber(.25)   
+      updateThresholdNumber(0)   
     }
   }
 

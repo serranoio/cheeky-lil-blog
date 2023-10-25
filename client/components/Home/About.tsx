@@ -57,8 +57,9 @@ const aboutMe: JSX.Element[] = [
   <>
   But then I realized that human potential is absolutely <span className={classes.tertiary}>limitless</span>, and I embodied it.
   I started waking up at 5 AM, going to the gym, cooking, reading, meditating, practicing self-love through nature,
-   and affirmations. Mostly importantly, I spent my entire 2021 Summer learning JavaScript, HTML, CSS, React from the
-   ground up. Every project that presented itself to me became an opportunity for my skills to reach another echelon.
+   and affirmations. Most importantly, I spent my entire 2021 Summer waking up at 5, going to the gym, then 
+   learning JavaScript, HTML, CSS, React from the
+   ground up from 9-5. Every project that presented itself to me became an opportunity for my skills to reach another <i>echelon</i>.
   </>,
 
   <>Chapter 3: The Full Stack.</>,

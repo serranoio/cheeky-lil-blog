@@ -123,6 +123,26 @@
   /* mask-image: linear-gradient(to left, white 0%, transparent 50%, white 100%); */
 }
 
+.project[data-project="8"] {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../../../public/assets/images/portfolio/accential.png");
+  /* mask-image: linear-gradient(to left, white 0%, transparent 50%, white 100%); */
+}
+
+.project[data-project="9"] {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../../../public/assets/images/portfolio/headifier.png");
+  /* mask-image: linear-gradient(to left, white 0%, transparent 50%, white 100%); */
+}
+
 .project:hover {
   transform: scale(1.02) !important;
   opacity: 1;
@@ -291,13 +311,35 @@
   }
 
   .projectGrid {
-    height: 125vh;
+    height: 150vh;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(10, 1fr);
   }
   .project {
     grid-column: 1 !important;
     grid-row: span 1 !important;
     /* grid-area: span 3; */
   }
+
+  .section {
+    padding: 9.8rem 6.2rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .flexModal {
+    flex-direction: column;
+  }
+
+  .chosenProjectLink {
+    display: flex;
+    justify-content: center;
+  }
+
+  .descBox {
+    padding: 3.2rem 1.2rem;
+  }
+
+
 }

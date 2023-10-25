@@ -48,7 +48,9 @@
 
 @media (max-width: 44em) {
   .card {
-    max-width: 50rem !important;
-    height: 70rem !important;
+    flex-direction: column;
+    max-width: 60vw !important;
+    height: 75vh !important;
+    border-radius: var(--br);
   }
 }

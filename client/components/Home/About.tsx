@@ -1,3 +1,11 @@
+// David Serrano, October 24th, 2023
+// If you're reading this, welcome to my portfolio code
+// Hope you enjoy it!
+// Free AF. Take it all
+// David Serrano, October 24th, 2023
+// If you're reading this, welcome to my portfolio code
+// Hope you enjoy it!
+// Free AF. Take it all
 import { useEffect, useState } from "react";
 import classes from "./About.module.css";
 import { sep } from "path";
@@ -11,7 +19,7 @@ const aboutMe: JSX.Element[] = [
   </>,
 
   <>
-  I interweave logic and abstraction within every line that I write, 
+  I interweave logic and abstraction within every line that I write,KeyModifie
   forming metaphors to make logic simple and light. {String.fromCodePoint(0x1F601)}
   </>,
 

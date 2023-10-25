@@ -1,3 +1,11 @@
+// David Serrano, October 24th, 2023
+// If you're reading this, welcome to my portfolio code
+// Hope you enjoy it!
+// Free AF. Take it all
+// David Serrano, October 24th, 2023
+// If you're reading this, welcome to my portfolio code
+// Hope you enjoy it!
+// Free AF. Take it all
 import SectionModal from "@/components/SectionModal/SectionModal";
 import { Hobby } from "@/store/data/hobby";
 import { FC, useState } from "react";

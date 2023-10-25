@@ -1,3 +1,11 @@
+// David Serrano, October 24th, 2023
+// If you're reading this, welcome to my portfolio code
+// Hope you enjoy it!
+// Free AF. Take it all
+// David Serrano, October 24th, 2023
+// If you're reading this, welcome to my portfolio code
+// Hope you enjoy it!
+// Free AF. Take it all
 import { FC } from "react";
 import { motion } from "framer-motion";
 import classes from "./Projects.module.css";
@@ -12,6 +20,8 @@ import mapsWithFriends from "../../../public/assets/images/portfolio/mapswithfri
 import techChad from "../../../public/assets/images/portfolio/techchad.jpg";
 import team8s from "../../../public/assets/images/portfolio/team8s.jpg";
 import SectionModal from "@/components/SectionModal/SectionModal";
+import headifier from "../../../public/assets/images/portfolio/headifier.png"
+import accential from "../../../public/assets/images/portfolio/accential.png"
 
 interface Props {
   isProjectOpened: boolean;
@@ -45,6 +55,10 @@ const ProjectModal: FC<Props> = ({
       return mapsWithFriends;
     } else if (chosenProject.type === 7) {
       return intent;
+    } else if (chosenProject.type === 8) {
+      return accential
+    } else if (chosenProject.type === 9) {
+      return headifier;
     }
 
     return techChad;

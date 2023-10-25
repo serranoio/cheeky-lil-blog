@@ -1,3 +1,7 @@
+// David Serrano, October 24th, 2023
+// If you're reading this, welcome to my portfolio code
+// Hope you enjoy it!
+// Free AF. Take it all
 import { StaticImageData } from "next/image";
 import coding from "../../public/assets/images/hobby/coding.jpg";
 import cooking from "../../public/assets/images/hobby/cooking.jpg";

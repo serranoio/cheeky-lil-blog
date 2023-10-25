@@ -144,6 +144,8 @@
 
 @media (max-width: 44em) {
   .hobbiesGrid {
+    height: 120vh;
+    padding: 0 8rem;
     grid-template-columns: 1fr !important;
     grid-template-rows: repeat(9, 1fr) !important;
   }

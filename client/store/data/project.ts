@@ -167,7 +167,7 @@ export const allProjects = [
     8
   ),
   new Project(
-    "1/ 6/ 4/ 11", 
+    "1/ 8/ 4/ 11", 
     "Headifier",
     "https://github.com/serranoio/headifier",
     [types.RUST],
@@ -175,5 +175,17 @@ export const allProjects = [
     and this is my first published project on crates.io!
     `,
     9
+  ),
+  new Project(
+    "1/ 6/ 4/ 8", 
+    "Soflare",
+    "https://github.com/serranoio/soflare",
+    [types.GO, types.CSS, types.TS],
+    `VERY early in production. Nonetheless it is an exciting project: it automates deployment of backend by
+    calling Fly API with fly.toml and an app {name}. The deployed backend API becomes available at: https://{name}.fly.dev/.
+    It clones the frontend and sets the Pocketbase instance connection to be https://{name}.fly.dev/ and pushes the change.
+    Then it calls the Netlify API to clone the selected repo and deploys it onto Netlify!
+    `,
+    10
   ),
 ];

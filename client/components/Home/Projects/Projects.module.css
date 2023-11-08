@@ -143,6 +143,16 @@
   /* mask-image: linear-gradient(to left, white 0%, transparent 50%, white 100%); */
 }
 
+.project[data-project="10"] {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../../../public/assets/images/portfolio/soflare.png");
+  /* mask-image: linear-gradient(to left, white 0%, transparent 50%, white 100%); */
+}
+
 .project:hover {
   transform: scale(1.02) !important;
   opacity: 1;

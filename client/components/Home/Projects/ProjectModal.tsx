@@ -22,6 +22,7 @@ import team8s from "../../../public/assets/images/portfolio/team8s.jpg";
 import SectionModal from "@/components/SectionModal/SectionModal";
 import headifier from "../../../public/assets/images/portfolio/headifier.png"
 import accential from "../../../public/assets/images/portfolio/accential.png"
+import soflare from "../../../public/assets/images/portfolio/soflare.png"
 
 interface Props {
   isProjectOpened: boolean;
@@ -59,6 +60,8 @@ const ProjectModal: FC<Props> = ({
       return accential
     } else if (chosenProject.type === 9) {
       return headifier;
+    } else if (chosenProject.type === 10) {
+      return soflare;
     }
 
     return techChad;

@@ -12,31 +12,26 @@ import { sep } from "path";
 import { useInView } from "react-intersection-observer";
 import AboutShow from "../AboutShow/AboutShow";
 
-
 const aboutMe: JSX.Element[] = [
   <>
   <p>I write <span className={classes.quartenary}>poetry</span>.</p>
   </>,
-
   <>
   I interweave logic and abstraction within every <span className={classes.quartenary}>line</span> that I write,
   forming metaphors to make logic simple and light. {String.fromCodePoint(0x1F601)}
   </>,
-
   <>
-  These metaphors are coupled together to create functions, or in other words, <span className={classes.quartenary}>stanzas</span>. 
+  Metaphors are coupled, so functions are formed.
+A verse is created, a <span className={classes.quartenary}>stanza</span> is crafted.
   {String.fromCodePoint(0x1F9D0)}
   </>,
-
   <>
-  Amongst all the chaos {String.fromCodePoint(0x2622)} in the world, 
-  these <span className={classes.quartenary}>stanzas</span> happen
-   to organize together to form a file and a <span className={classes.quartenary}>poem</span> is manifested.
-   {String.fromCodePoint(0x1F4AD)}
+  Chaos {String.fromCodePoint(0x2622)} ensues, yet the <span className={classes.quarternary}>stanzes</span> are organized.
+A file is made, a <span className={classes.quarternary}>poem</span>  is manifested. {String.fromCodePoint(0x1F4AD)}
   </>,
-
 <>
-  Put multiple files together to create a project, and you get a <span className={classes.quartenary}>story</span>.
+Put multiple files together to create a project, 
+and you turn your <span className={classes.tertiary}>poems</span> into a <span className={classes.quartenary}>story</span>.
 {String.fromCodePoint(0x1F4D5)}
   </>,
 
